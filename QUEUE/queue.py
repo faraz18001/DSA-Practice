@@ -33,6 +33,23 @@ class Queue:
         self.lenght+=1
 
 
+    def dequeue(self):
+        temp=self.first
+        if self.lenght==0:
+            return None
+
+        if self.lenght==1:
+            self.first=None
+            self.last=None
+        else:
+            self.first=self.first.next
+            temp.next=None
+        self.lenght-=1
+
+        return temp
+
+        
+
 
 
 
