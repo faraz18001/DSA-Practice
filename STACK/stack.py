@@ -1,0 +1,31 @@
+class Node:
+    def __init__(self,value):
+        self.value = value 
+        self.next=None
+
+
+class Stack:
+    def __init__(self,value):
+        new_node=Node(value)
+        self.top=new_node  # noqa: F821
+        self.bottom=None
+
+        self.height=1
+
+
+    def print_stack(self):
+        temp=self.top
+
+        while temp is not None:
+            print(temp.value)
+
+            temp=temp.next  
+
+mystack=Stack(4)
+mystack.print_stack()
+
+
+    
+
+
+    
