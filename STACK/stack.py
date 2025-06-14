@@ -21,8 +21,31 @@ class Stack:
 
             temp=temp.next  
 
-mystack=Stack(4)
-mystack.print_stack()
+    def push(self,value):
+        new_node=Node(value)
+        if self.top is None:
+            self.top=new_node
+
+        else:
+            new_node.next=self.top
+            self.top=new_node  
+        self.height+=1
+
+stack=Stack(4)
+stack.push(1)
+stack.print_stack()
+
+        
+
+
+
+
+
+
+
+
+"""mystack=Stack(4)
+mystack.print_stack()"""
 
 
     
