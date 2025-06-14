@@ -31,21 +31,19 @@ class Stack:
             self.top=new_node  
         self.height+=1
 
-stack=Stack(4)
-stack.push(1)
-stack.print_stack()
+    def pop(self):
+        
+        if self.top is not None:
+            return None
+        temp=self.top
+        self.top=self.top.next
+        temp.next=None
+        self.height-=1
+        return temp
+
 
         
 
-
-
-
-
-
-
-
-"""mystack=Stack(4)
-mystack.print_stack()"""
 
 
     
