@@ -1,149 +1,67 @@
-# Circular Queue Implementation without OOP using Python Arrays
+def create_circular_queue(size):
+    circular_queue = [None] * size
+    front = rear = -1
 
-def create_queue(size):
-    """Create a new circular queue with given size"""
+    def is_empty():
+        return front == -1
+
+    def is_full():
+        return (rear + 1) % size == front
+
+    def enqueue(item):
+        if is_full():
+            print("Queue is full")
+            return False
+        if is_empty():
+            front = 0
+        rear = (rear + 1) % size
+        circular_queue[rear] = item
+        return True
+
+    def dequeue():
+        if is_empty():
+            raise IndexError("Dequeue from empty queue")
+        item = circular_queue[front]
+        if front == rear:  # Queue has only one element
+            front = rear = -1
+        else:
+            front = (front + 1) % size
+        return item
+
+    def get_size():
+        if is_empty():
+            return 0
+        return (rear - front + 1) % size + 1
+
+    # Return a dictionary of operations to manipulate the circular queue
     return {
-        'data': [None] * size,
-        'front': -1,
-        'rear': -1,
-        'size': size,
-        'count': 0
+        "enqueue": enqueue,
+        "dequeue": dequeue,
+        "is_empty": is_empty,
+        "is_full": is_full,
+        "size": get_size
     }
 
-def is_empty(queue):
-    """Check if the queue is empty"""
-    return queue['count'] == 0
+# Example usage
+queue_operations = create_circular_queue(5)
+enqueue = queue_operations["enqueue"]
+dequeue = queue_operations["dequeue"]
+is_empty = queue_operations["is_empty"]
+is_full = queue_operations["is_full"]
+size = queue_operations["size"]
 
-def is_full(queue):
-    """Check if the queue is full"""
-    return queue['count'] == queue['size']
+enqueue(10)
+enqueue(20)
+enqueue(30)
+enqueue(40)
+enqueue(50)
 
-def enqueue(queue, item):
-    """Add an item to the rear of the queue"""
-    if is_full(queue):
-        print("Queue is full! Cannot enqueue.")
-        return False
-    
-    if is_empty(queue):
-        queue['front'] = 0
-        queue['rear'] = 0
-    else:
-        queue['rear'] = (queue['rear'] + 1) % queue['size']
-    
-    queue['data'][queue['rear']] = item
-    queue['count'] += 1
-    print(f"Enqueued: {item}")
-    return True
+print(dequeue())  # Output: 10
+print(dequeue())  # Output: 20
 
-def dequeue(queue):
-    """Remove and return an item from the front of the queue"""
-    if is_empty(queue):
-        print("Queue is empty! Cannot dequeue.")
-        return None
-    
-    item = queue['data'][queue['front']]
-    queue['data'][queue['front']] = None  # Clear the slot
-    
-    if queue['count'] == 1:
-        # Queue becomes empty
-        queue['front'] = -1
-        queue['rear'] = -1
-    else:
-        queue['front'] = (queue['front'] + 1) % queue['size']
-    
-    queue['count'] -= 1
-    print(f"Dequeued: {item}")
-    return item
+enqueue(60)
 
-def peek_front(queue):
-    """Return the front item without removing it"""
-    if is_empty(queue):
-        print("Queue is empty!")
-        return None
-    return queue['data'][queue['front']]
-
-def peek_rear(queue):
-    """Return the rear item without removing it"""
-    if is_empty(queue):
-        print("Queue is empty!")
-        return None
-    return queue['data'][queue['rear']]
-
-def display_queue(queue):
-    """Display the current state of the queue"""
-    if is_empty(queue):
-        print("Queue is empty")
-        return
-    
-    print(f"Queue state: {queue['data']}")
-    print(f"Front index: {queue['front']}, Rear index: {queue['rear']}")
-    print(f"Count: {queue['count']}/{queue['size']}")
-    
-    # Show actual queue elements in order
-    elements = []
-    if not is_empty(queue):
-        i = queue['front']
-        for _ in range(queue['count']):
-            elements.append(queue['data'][i])
-            i = (i + 1) % queue['size']
-    
-    print(f"Queue elements (front to rear): {elements}")
-
-def get_size(queue):
-    """Get the current number of elements in the queue"""
-    return queue['count']
-
-def get_capacity(queue):
-    """Get the maximum capacity of the queue"""
-    return queue['size']
-
-# Example usage and testing
-if __name__ == "__main__":
-    print("=== Circular Queue Demo ===")
-    
-    # Create a queue with capacity of 5
-    q = create_queue(5)
-    
-    print(f"Queue created with capacity: {get_capacity(q)}")
-    print(f"Is empty: {is_empty(q)}")
-    print(f"Is full: {is_full(q)}")
-    
-    print("\n--- Enqueue Operations ---")
-    enqueue(q, 10)
-    enqueue(q, 20)
-    enqueue(q, 30)
-    display_queue(q)
-    
-    print(f"\nFront element: {peek_front(q)}")
-    print(f"Rear element: {peek_rear(q)}")
-    
-    print("\n--- More Enqueue Operations ---")
-    enqueue(q, 40)
-    enqueue(q, 50)
-    display_queue(q)
-    
-    print(f"\nIs full: {is_full(q)}")
-    
-    # Try to enqueue when full
-    print("\n--- Trying to enqueue when full ---")
-    enqueue(q, 60)
-    
-    print("\n--- Dequeue Operations ---")
-    dequeue(q)
-    dequeue(q)
-    display_queue(q)
-    
-    print("\n--- Enqueue after dequeue (circular behavior) ---")
-    enqueue(q, 60)
-    enqueue(q, 70)
-    display_queue(q)
-    
-    print("\n--- Dequeue all elements ---")
-    while not is_empty(q):
-        dequeue(q)
-    
-    display_queue(q)
-    
-    # Try to dequeue when empty
-    print("\n--- Trying to dequeue when empty ---")
-    dequeue(q)
+print(dequeue())  # Output: 30
+print(dequeue())  # Output: 40
+print(dequeue())  # Output: 50
+print(dequeue())  # Output: 60
