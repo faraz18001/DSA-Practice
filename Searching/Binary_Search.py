@@ -4,7 +4,7 @@ def binarysearch(arr:list,target:int):
         mid_point=(left+right)//2
         if arr[mid_point]==target:
             return mid_point
-        
+       
         elif arr[mid_point]<target:
             left=mid_point+1
 

@@ -1,0 +1,78 @@
+So in this video, we're going to pop the first item off of the link list.
+So it's going to look like this.
+And we're going to move head over like this and remove this.
+And, of course, return it.
+And then we have a couple of edge cases.
+One, if we have one item in the link list, this is similar to when we popped an item off of the other
+end that we have an edge case for when we have one item and then we have another edge case for when
+we don't have any items in the link list.
+So if you want to code this, go ahead and pause the video here.
+Otherwise, we'll get into the code.
+So we'll say pop first and then this situation here where we don't have any items in the linked list,
+we will code for this one.
+First will say if the length is equal to zero.
+We're going to return none.
+So now let's look at when we have two or more items in the list and write the code for that.
+And we are removing that first node there.
+In order to return that, we have to have something pointing at it.
+So we'll call that temp.
+It will say temp equals self dot head.
+Then we're going to want to move head over.
+So we'll set that equal to head dot next and that'll move that over.
+We do that with this line of code, head equals head.
+Next, then we want to remove that 11 from the list.
+Like this.
+And have that be equal to none.
+So we'll say next equals none.
+And that removes that from the list.
+So then we'll decrement the length by one.
+And this brings up our edge case for when we have one item in the list to start with.
+So let's just walk through this like we did on the other end of the list when we were removing an item.
+So we have temp is equal to self head like this.
+And then we'll say head is equal to head next, while head dot next is none.
+So that just sets head equal to none, which is what we do want.
+And then ten next equals none.
+We'll temp dot next is already none.
+So that doesn't do anything.
+So we'll remove that and then I'll remove the variable as well like that.
+And then we decrement the length by one.
+It was one and now the length is zero, but tail is still pointing at that one node.
+So we need to have tail also point to none.
+So we'll say if the length is zero.
+Will have tail be set equal to none.
+And that solves that problem.
+Let's look at this in with the rest of our code.
+Okay, so let's walk through this.
+This is when we have zero items in the length list.
+Its length equals zero.
+We have another length is equal to zero here, but it is after we have decrement of the length by one.
+So that second, if statement applies when you started with one item, now the only thing left to do.
+Is return temp, which is the item that we removed from the link list.
+So we'll look at this code in a moment in VTS code.
+And we will start with a linked list that looks like this.
+Remember, we have three scenarios that we coded for, one with two items in the list.
+We need to make sure that that works.
+So we'll remove that.
+And then we need to make sure it works when we have one item in the list.
+And then, of course, when we don't have any items on the list, we want it to return none.
+So let's flip over to VTS code.
+So there is the pop first method that we just created, and then this creates that link list with a
+two and a one.
+And then we'll print that out.
+Okay, so there is our link list with a two and a one.
+And then I'm going to come down here.
+I'm going to remove this print list line here.
+Then I'm going to paste in a few lines of code here.
+So this is just going to run the pop first method three times and print out the results.
+So we're going to do that with the two items, the one item and the zero items.
+And we'll run this.
+And you can see up here that this printed out our two nodes and then finally it returned none.
+And just like we did with the pop method, I'm going to come up here and put temp dot value here.
+And you don't want to keep it that way.
+You always want to return the entire node, but to test it, we'll just return the value to make sure
+we're getting the right values.
+And there is to one and none.
+That's exactly what we're looking for.
+So I'm going to come back up here and remove the dot value to put it back the way that it should be.
+And that is our method for pop.
+First.

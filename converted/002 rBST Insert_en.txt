@@ -1,0 +1,109 @@
+So now we're going to write our method for recursive insert.
+And we'll start our code out like this.
+And we're going to start out with a double underscore, just like we did with contains, because we
+want to kick this off with this method where we only need to pass it the value.
+And one of the differences I want to point out between recursive insert and recursive contains is the
+contains method had a return statement here.
+And recursive insert does not.
+So that's going to cause this to have a little bit different behavior.
+And we'll talk about this more later in the video.
+But when you call, this method is going to call the double underscore recursive insert with the root
+and the value that we want to insert.
+So we're going to start out with this tree and we're going to insert the number 18.
+I'm going to bring up a call stack here and add an instance with the root to the call stack.
+So then we're going to say if the value that we want to insert is less than current node value, then
+we're going to say current node dot left is equal to recursive insert and this is where it's going to
+be recursive.
+And we're going to do that on current node left.
+And that's going to be the 21 node.
+And then we're also going to pass this the value that we want to insert.
+So now this is the active instance on the call stack and it will start at the top and say if the value
+that we want to insert 18 is less than current node value, which is 21, then we're going to set current
+node left to be equal to another instance of insert on current node left.
+Well, current node left out is none.
+So we're calling an instance on none.
+And this is our base case.
+So we're going to say if current node is equal to none, we're going to return a node with the value
+that we're inserting, in this case the value of 18.
+So this part here is actually creating a new node.
+And this part here is going to take that new node and return it, and it's going to return it to here.
+And when it does that, this gets popped from the call stack.
+So I want to point out that this is actually a new node.
+As we get into the video, we are going to see that pointers to nodes will be returned as well.
+And I will indicate that when we get to it.
+So this is the active instance on the call stack.
+This was the last line to run this part of this line is what called the instance that was just popped
+from the call stack.
+The instance that returned this new node.
+So now we're going to set current node left to be equal to this new node.
+And then we're going to return current node.
+So for this instance, current node is this node here and current node is a variable that is pointing
+at that node.
+And it's going to return that pointer to a node to here.
+So I'm just going to leave that pointer to this node.
+And I want to emphasize that this is not a new node.
+This is a pointer to the existing 21 node.
+And when it does that, this gets popped from the call stack.
+So now this is the active instance on the call stack.
+This is the last line it ran.
+And this portion of this line called that instance that was just popped from a call stack.
+The instance that returned this pointer to this 21 node.
+So we're going to make it where current node left points to this 21 node, and current node is this
+47.
+And what you're basically saying is continue pointing at that node.
+So let's say we go 100 levels deep in a binary search tree.
+We would do this 100 different times and tell each node all the way up the tree to continue pointing
+at the node that it was already pointing to.
+That's the way it works until you get to the root, which is where we are here.
+In this case, when we return current node, we return it to here.
+And because this doesn't have a return statement here like we had in contains, it doesn't do anything
+with this without a return.
+Statement.
+This method just basically takes that and throws it away or ignores it however you want to look at that,
+but it doesn't do anything with it.
+But once that's returned, this gets popped from the call stack.
+So far in this video, we have only traversed to the left and obviously we need to be able to traverse
+to the right as well.
+We'll do that like this.
+It's basically identical code, except it has a greater than here and it goes to the right instead of
+the left.
+And with that that is all of the code for recursive insert.
+So we've walked through inserting a value that is not already in the tree.
+Remember, binary search trees cannot have duplicates.
+So now let's walk through what it would look like if you were trying to insert a duplicate value.
+And in this case we're going to run insert on the value of 21.
+So just like before, we're going to kick this off with an instance called On the Root 21 is less than
+the current node value.
+So we're going to call an instance on current node left and we'll do that like that.
+So now the value that we're trying to insert is equal to current node value.
+So now this is the active instance on the call stack.
+So we'll start out at the top and say if current node is equal to none, and it's not none because it's
+the 21 node and because the value that we're trying to insert is equal to current node value, that
+means it is not less than and it is not greater than.
+So now we come down to here.
+So we're going to return current node and this gets popped from the call stack.
+So now this is the active instance on the call stack.
+This is the last line it ran and current node left is equal to this 21 node.
+So we're going to have that 47 node continue pointing at the same node and it doesn't insert the value
+again and then it's going to return the current node, that 47 node, it will return that to here.
+And this gets popped from the call stack.
+So that is how this deals with duplicates.
+So that is all of our code for recursive insert, except this doesn't cover one edge case.
+This code will not work on an empty binary search tree.
+So we'll say if self root is equal to none, then we're going to set self root to be equal to a new
+node with the value that we're inserting.
+And that takes care of that edge case.
+So now that is all of our code for recursive insert.
+So as always, we'll look at this in a moment in VTS code.
+And when we do, we're going to run recursive insert on a node with the value of two and then on a value
+of one and a value of three.
+And then we'll print out root and root left and root right to make sure that this all inserted correctly.
+So now let's flip over and take a look at this.
+So there are the two recursive insert methods that we just created.
+And then I'm going to scroll up.
+And this creates that binary search tree where we run recursive insert on two, then one, then three,
+and that should create this tree here.
+And then down here we're going to print out root and root left and root right.
+And I'll run this and you can see that this is printed out.
+Root as two, and root left is one and root right as three.
+So it looks like we have a working solution for recursive insert.

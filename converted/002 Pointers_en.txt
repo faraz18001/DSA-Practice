@@ -1,0 +1,103 @@
+So in this video, we're going to talk about pointers and specifically we're going to talk about how
+pointers work differently with different data types.
+So we'll start out with a variable we call num one.
+We'll set that equal to an integer 11, and then we'll create a second variable called num two, and
+we'll set that to be equal to num one.
+So when we do this, we're creating an integer 11 somewhere in memory, and then we point the variable
+num one at that integer.
+But the question is what happens when we set num two to be equal to num one?
+Are we creating a separate number 11 that num two points to or does num two point to the same number
+11 in memory that num one is pointing to.
+So to test this out, let's flip over to VS Code.
+So there is our num one equal to 11 and our num two equal to num one up here.
+And then we're going to print out the values of num one and num two here.
+But it's these two lines here that we're really interested in.
+This is going to give us the address where num one and num two are stored.
+So I'll run this and you can see here that num one and num two point to the exact same address, they
+are pointing to the same number 11 in memory.
+So now let's flip back.
+So now the next question is what happens if we set num two to be equal to 22?
+Does this 22 overwrite the 11?
+And if this is the case, the num one and num two would now be pointing at 22.
+Or do we create a separate integer somewhere else in memory and have num to point to that integer?
+So now to test this out, let's go back to VS Code.
+So this is the code we just looked at in VS Code.
+But now I'm going to add a few lines and I'll paste this in.
+So this is where we set num two to be equal to 22.
+And then with these lines we'll show what num one is equal to and two is equal to.
+And then down here we'll show the addresses that num one and num 2 point to.
+So I'll run this.
+So this up here is what we had printed out before and then this is after.
+two has been updated.num
+In other words, after this line of code over here.
+And you can see that num one and num two are now two different values and that num one here after the
+change is the same as it was before the change.
+So now let's flip back.
+So this diagram here is a representation of how it works.
+And the reason for that is that integers are what are called immutable, which means they cannot be
+changed.
+Once you put a number 11 into a particular place in memory, you cannot change that number 11.
+Now you can point num one to a different integer that is stored somewhere else, which you can't
+actually change the number 11 once you create it.
+So now let's look at another data type that works in a different way than integers do.
+I'm going to create a dictionary called Dictionary one.
+I'm going to set it equal to value 11.
+So this variable is going to point at this dictionary in memory.
+Now, if we create another dictionary that we call dictionary two and we set this equal to dictionary
+one, the question is do we create an additional dictionary that is identical someplace else in memory
+and have dictionary two point at it?
+Or do we have dictionary two point at the same dictionary in memory?
+So the answer to that is they are both going to point to the same dictionary.
+So this is something that is going to be the same as if we are working with an integer.
+But what if we say dictionary two value is equal to 22?
+Do we take that 11 and overwrite it like this, or do we create a second dictionary and have dictionary
+t2o point at that?
+So now to test this out, let's flip back to VS Code.
+So that's where we create dictionary one with a value of 11 and then set dictionary two to be equal
+to dictionary one, and then we'll print out dictionary one and two.
+And this is where we look at the address, where dictionary one and dictionary two are stored.
+So I'll run this.
+And you can see that dictionary one and dictionary two are both pointing to the same address in memory.
+So now I'm going to add a few lines of code here.
+And this is where we change the value in dictionary two to be equal to 22.
+And then we're going to print out the values of both dictionary one and dictionary two again.
+And then print out the addresses for both.
+So I'll run this.
+So now, after the value is updated, both dictionary one and dictionary two have value 22.
+They are the same.
+This is different than what we had with integers.
+Also, you can see the dictionary one and dictionary two are still pointing to the same address, which
+is identical to what it was before we did the update.
+So now let's flip back and talk about this.
+So with dictionaries, we can take that number 11 and then change it to a 22 where integers are immutable
+and can't be changed.
+Dictionaries can be changed.
+So dictionary one and dictionary two continue pointing to the same place, but we are able to change
+the value.
+So why is this important for a data structures and algorithms course?
+Well, the reason for that is we're going to see this concept come up a lot.
+For example, when we have a linked list, the nodes in a linked list are going to operate very much
+like a dictionary.
+So if you have two variables that point at the same node, you can change the value of that node.
+Say we change this from a 22 to a 44.
+Say the variables continue to point at the same node even though we changed the value.
+So I'm going to change this back to a 22 and I'm going to change this back to a dictionary and show
+a couple of other concepts.
+Let's say we have another dictionary that we call Dictionary three, and this one is value 33.
+If we set dictionary two to be equal to dictionary three.
+We can take that and point that down at the new dictionary so we can change where these variables point
+to.
+So this is something that you'll see quite a bit in the next section on Linked List.
+We might want to move ahead to point to a new node.
+And when we do that, we just need to set head to be equal to something else that is pointing at that
+node.
+And then there's another concept I want to explain.
+And to do that, I'm going to set dictionary one to be equal to dictionary two.
+And of course that's going to point that down here, and we'll have all three variables pointing at
+this same dictionary.
+Now, the question is, what happens to this dictionary because we no longer have anything pointing
+to it.
+And if you don't have a variable that's pointing to this, you don't have any way to access this.
+So what Python does in this situation is Python will remove this through a process called garbage collection.
+And that is our overview.
+Of pointers.

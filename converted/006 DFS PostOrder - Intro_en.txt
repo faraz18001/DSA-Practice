@@ -1,0 +1,35 @@
+Now, let's look at depth first search post order.
+I want to bring up a tree here and this video will just walk through the steps of it and the will code
+it in the next video.
+And just like with all the other trees reversals, we're going to start at the top.
+What's different here is that we're just going to visit that 47 node.
+We're not going to write that value to the results list yet.
+Then we're going to go to the left and then visit the twenty one and we'll go to the left again to the
+18.
+Now what the 18 is going to do is it's going to look to the left.
+There's no node there.
+It'll look to the right and there is no node there.
+And then finally, it will write its value to the results list.
+So the order that we're doing this is we look left, we look right, and then we write the value from
+that node.
+So now we come up to the twenty one.
+It has gone left.
+Now it's going to go right to the twenty seven.
+It's going to look to the left, it's going to look to the right.
+And then finally we will write the value.
+Twenty seven to the results list.
+Now we come back up to the twenty one again.
+Now it has gone left.
+It has gone right now we can write that value to the list and that brings us back up to the forty seven.
+It has gone left now.
+It will go right to the 76 node and we always start with going left first.
+So it will go to the 52 node, it will look left and right and then right its value.
+We come back up to the 76 it has gone left now it will go right.
+That 82 node will look left and then right and then right.
+Its value.
+That brings us back up to the seventy six.
+It has now gone left and right and it can write its value.
+And that brings us back up to the forty seven.
+It has gone left.
+It has gone right and now its value can be written to the results list.
+So while code this in the next video, but that is our overview of depth, first search post order.

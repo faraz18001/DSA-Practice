@@ -1,0 +1,152 @@
+So now we're going to write our code for merge sort and we'll start our code off like this and we're
+going to pass it this list.
+And on the right side of the screen, I'm going to bring in a call stack and I'm going to add an instance
+of merge sort to the call stack.
+So Merge sort is going to be called recursively.
+So we're going to have multiple instances of merge sort on the call stack and each instance is going
+to be called with a list.
+So to keep track of what list, each instance of merge sort was called with, I'm going to do this.
+So now we're going to split that list in half.
+And in order to do that, we're going to need a midpoint.
+We'll call that mid index and we're going to set the mid index to be equal to the length of the list
+divided by two.
+So in this case, the length is four divided by two is two.
+Now, one of the things we have to do here is to account for when we have an odd number in the list.
+So for example, if we had a list with three items in it and we divide by two, we're going to get 1.5
+and we can't have an index of 1.5.
+So we're going to change this into an integer.
+And in the situation where the mid index would be 1.5, everything to the right of the decimal place
+would be dropped and the mid index would be one.
+But in this situation because we have four items, the mid index is two and that is this index here.
+So I'm going to take that two and store it next to this instance of merge sort, that's mid index for
+this instance.
+So now we're going to create two new lists.
+The first one will call left will set it equal to my list on this range.
+So when you do a range like this with this colon, whatever's on the left, that's the starting point.
+If you don't have anything on the left, the starting point becomes the first item and we go up to but
+not including the index that's on the right of the colon.
+So mid index is this and when we go up to but not including we're going up to this index.
+So left is going to be a new list with these two values in it and then we'll do the same thing on the
+other side.
+We'll say right equals my list on this range.
+So on the left of the colon we have mid index.
+That's the starting point that will be here.
+And if we don't have anything on the right of the colon, we just go to the end.
+So that means we're going to create a new list with these two values in it.
+So left and right will be these two new lists.
+Then we call merge.
+That's the helper function that we wrote in the last video and we call it on left and right.
+But there's a problem here.
+Merge only works on sorted lists and neither one of these lists is sorted.
+What we need to do is break each of these lists in half and we do that with these three lines of code
+and specifically the splitting happens with this code here.
+And this did exactly what it was supposed to do.
+We just need to do it again.
+So this is where we call merge sort recursively.
+So now let's take these two lists, put them back together and we're going to start this over.
+So we've already calculated the mid index.
+We know that's the index of two.
+And then when we come down here, this portion of the code does exactly what it did before.
+It's just going to create this new list with two items in it.
+The difference is we're going to call Merge sort on that new list.
+So we'll add this to the call stack with this list.
+So now this becomes the active instance on the call stack.
+So for this instance of merge sort, we're going to start out by calculating the mid index on this list.
+So the length of this list is two divided by two is one.
+This is going to be the mid index.
+So then we come down to this line and this portion here is going to create a new list of just one item.
+And I colored this green because a one item list is by definition sorted, but we're going to call merge
+sort on that list.
+We'll add this to the call stack on this list.
+And since this list has one item in it, we don't want to run these three lines to try to break the
+list in half.
+This is our base case.
+So we're going to say if the length of the list is one and that is the case here, we're going to return.
+Turn my list.
+So in this return statement, where does it return it?
+It's going to return it to the function that called it.
+And once the return is run, this gets popped from the call stack.
+So now this becomes the active instance on the call stack again.
+And this was the last line that it ran.
+So it ran this in order to determine what left would be for that instance of merge sort.
+So I'll put this back and now we'll move to this line.
+So this portion here is going to create this list and we're going to call Merge sort on that list.
+And now this becomes the active instance of merge sort on the call stack.
+The first thing we'll do is check to see is the length equal to one.
+It is.
+And we're going to return my list and this gets popped from the call stack.
+So this becomes the active instance of merge sort on the call stack.
+Again, we just ran this line and this one item list is right.
+So now we move down to here and we're going to run merge on left and right.
+So we'll add this to the call stack on left and right.
+And that's going to do this.
+So this line here, I'm going to remove the return to show what this does.
+So the merge function has a return statement in it.
+So where does it return to?
+It returns to here.
+And once it runs that return, this instance of merge gets popped from the call stack.
+So now this is the active instance, but it has this return statement in here.
+It's going to return whatever merge returned to it, which means it's going to take this list and return
+it to here.
+And once it does that, that is popped from the call stack.
+So now this is the active instance on the call stack.
+We just ran this and determined that left equals this sorted list.
+So I'll put this back and we'll move to this line of code.
+So remember, this is being called on that four item list.
+So right is going to be these two items that right side of that four item list, except we're going
+to call Merge, sort on it.
+We'll add this to the call stack.
+And it's being called on this list.
+So now this becomes the active instance of Merge sort on the call stack.
+We're going to check to see if the length is one.
+It is not.
+So now we'll calculate mid index and that's going to be this item.
+And then we move down to here.
+This portion is going to create this one item list.
+We're going to call Merge sort on that.
+And now this becomes the active instance.
+We'll check to see if the length is one.
+It is and will return my list and this gets popped from the call stack.
+So now this is the active instance.
+Again, we just determined that this one item list is going to be left.
+Now we move to here.
+So this portion here is going to create this one item list and we're going to call Merge, sort on that
+one item list.
+And now this becomes the active instance.
+We'll check to see if the length is one.
+It is will return that one item list.
+And this just popped from the call stack.
+So now for this instance of merge sort, we have determined left and right now we move down to here
+and call merge.
+On left and right.
+We'll add this to the call stack with both of those one item lists.
+And that does this and I'll do that same thing where I remove the return merge is going to return this
+list to here that gets popped from the call stack.
+But this instance of merge sort because it has this return is going to take this list and pass it down
+to here.
+And when it does that, it gets popped from the call stack.
+And I'll move this back up here and now this is the active instance again, we have found left and right
+for this instance of merge sort, which are these two sorted lists.
+Now we move down to here and we're going to run merge on these two lists.
+We'll add that to the call stack on these two lists and that is going to do this.
+So I'll remove that return from the code.
+Again, Merge is going to return this list to here and that is popped from the call stack.
+But because this instance of merge sort has this return statement, it's going to return this somewhere.
+And the place that this gets returned to is the original function call is going to return it to here.
+And once it does that this instance of merge sort is popped from the call stack and now we have this
+sorted.
+List.
+So we'll look at this code in a moment and vs code.
+And when we do, we'll start out with a list that looks like this and we'll run, merge sort and return
+a sorted list.
+So now let's flip over and take a look at this.
+So there is our merge sort function there and I'll scroll up.
+So this is going to be the list that we pass to merge sort and I'm calling this original list and then
+I'm going to have a separate list called sorted list that is equal to merge sort on the original list.
+So merge sort is different than the other sorting algorithms that we've seen so far.
+The other sorting algorithms sort the list in place.
+That is to say that the original list will be sorted when we're done.
+But with merge sort, the original list stays the same and it returns a separate sorted list.
+So now I'll run this.
+And you can see that our original list is unchanged and there is a separate sorted list that was returned.
+And that is our function for merge sort.

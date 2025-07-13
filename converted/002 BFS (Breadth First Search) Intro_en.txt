@@ -1,0 +1,42 @@
+So in this video, we're going to look at the steps to do breadth first search.
+So Breadth First Search was the one where we would start at the top and then do the second row and then
+the third row straight across and so on.
+So I'm going to move this over.
+And the way we're going to do this is we're going to create two lists.
+The first one we're going to call Q and the other one is going to be called results.
+Results is going to be the one we return with all of the values of the nodes.
+But with the queue, we're going to start at the top and we're going to store this node in the queue.
+So it's an important point here that we're storing the entire node in the queue.
+We're storing not just the value of 47, we're storing the left and the right as well.
+So I'm going to change this.
+To look like this.
+I'll keep this is blue to emphasize that this is the entire node.
+So we're going to do something with the value and the left and the right.
+So to begin with the value, we're going to move it down to results.
+I change this to green because in the results list, we are only storing the value, not the entire
+node.
+And then for the left and the right, we'll start with the left.
+We're going to store the node from the left of the 47 in the queue, and then we'll do the same for
+the one on the right.
+And then we'll go through the same three steps with the value and the left and the right with the twenty
+one, we move the value down to results.
+To the left of the twenty one is eighteen.
+To the right of the twenty one is twenty seven.
+And then we do the process again.
+The 76 gets moved down here.
+76 has a node to the left, which is the 52, and it has one to the right which is the 82.
+So when we do the process this time we have a value.
+Eighteen but eighteen doesn't have anything on the left or the right.
+So then we move to the twenty seven, the same as the case with that as well as with the 52 and the
+82.
+So the loop that we're creating to do this will only run as long as the queue has items in it.
+So now that the queue is empty, that means that we've visited every item in the tree and the only thing
+left to do is to return this results list.
+Now, there's something else that's interesting about breadth.
+First search.
+Let's look at just the numbers in this list.
+If you take the first one and put it here and then you take the next two in the list and you put them
+here.
+You can see that this is an exact replica of the tree.
+So those are the steps, and in the next video, we will code.
+Breadth, first search.

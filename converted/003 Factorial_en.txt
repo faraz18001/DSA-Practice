@@ -1,0 +1,140 @@
+So now we're going to use recursion to solve a factorial.
+And factorial is something that is used to teach recursion in pretty much any course that teaches recursion.
+And if you've never seen a factorial before, it looks like this.
+This is four factorial and four factorial is four times three times two times one.
+So I'm going to shrink this down like this.
+And let's walk through why this is a perfect thing to use to teach recursion.
+So three times, two times one.
+Would be equal to three factorial.
+So you could say that four factorial is equal to four times three factorial.
+And you could say that three factorial is equal to three times two factorial, and two factorial is
+equal to two times one factorial and one factorial.
+Well, this is our base case, so this one's going to be different.
+One factorial.
+It's just going to be one.
+A couple of videos ago, we talked about a couple of things that you need to have in a recursive function.
+The first is that you need to be doing the same thing over and over, and you can see that this process
+is the same all the way down.
+The other thing is that the problem needs to be getting smaller until you finally get to a base case.
+So this is perfect.
+So I'm going to shrink this down.
+And what I'm going to do is I'm just going to bring in the entire function and then we'll walk through
+it.
+So this is our recursive function for factorial.
+We're going to pass this a number in in this case, we're going to pass it to number four.
+Then we're going to check to see if n is equal to one.
+When we get to the point where N is one, we're going to return one.
+If N is not equal to one, we'll come down to this line here where we return in times factorial of n
+minus one.
+So this is where the function calls itself.
+So in this first iteration, it would look like this we're going to return in, which is four times
+factorial of n minus one and minus one would be three.
+So let's move this function up to the corner like this and we'll walk through this.
+So first we have factorial of MN and is equal to four to begin with.
+And we'll say is in equal to one.
+Well, obviously it's equal to four, so it's not one.
+So we will return in times factorial of MN minus one, so we can do this and we'll populate that with
+four and three.
+So now we're calling the function with being equal to three.
+So when we run our if is an equal to one, it is not.
+So that causes us to run this line here.
+And this is going to be three and two this time.
+So we're running factorial on two.
+So now our if statement is an equal to one, it's not.
+So we have to run this line again.
+And now we're going to use two and one.
+So we're running factorial on one.
+So now when we say if n equals one, it is going to be true.
+And we're going to return one.
+That is this one here.
+So now let's just look at these lines here.
+Let's spread these out.
+And when we return, the one we're returning, the one to this function call here.
+And then we're going to return two times factorial one to this function call.
+And so on up the line until we return the answer to this line here.
+So let's walk through what this is going to look like.
+So when we return one there, we're returning to times one.
+Which equals two.
+Up to here.
+Now we're going to return three times two, which equals six.
+Up to here.
+Now we're going to return four times six, which equals 24.
+Up to here and factorial of four equals 24.
+So now let's look at this a different way.
+Let's use the gift boxes that we used a couple of videos ago.
+So we start out with this being factorial of four.
+Then three and two and one.
+And in the gift box video, we had a ball when we reached our base case.
+But now this is going to be a one.
+And then one gets returned to this function call.
+And then we have two times.
+One is two gets returned to this function call.
+Three times two is six.
+Like that.
+And then finally, we get to the 24.
+And now let's look at this yet another way with our call stack.
+We start out with factorial four.
+That goes on to the call stack first.
+Then we have factorial three gets pushed onto the call stack and then two gets pushed onto the call
+stack.
+And then one gets pushed onto the call stack like this.
+And it's only that last instance of the factorial function that can run because it's at the top of the
+call stack.
+So remove that and then we can calculate the next one like this and so on until we get to here.
+And then we return the 24.
+So now let's go look at this NVS code.
+So there is our factorial function there and then we'll call it here factorial four and print out the
+result.
+And just like we did in the last video, we're going to come up here and open this run and debug side
+window like that.
+And then over here, we're going to click on the three dots.
+Now we're going to choose the debug console.
+And next to this line, we're going to click the red dot.
+Highlight that to create a breakpoint.
+Up here for running debug.
+We want python current file to be here and if it's not do the little dropdown menu, make sure that's
+selected.
+And we'll click on the green play button.
+And now we can walk through this step by step.
+So now when I click on the step into, it's going to run factorial the factorial function with a value
+of four.
+And that gets pushed on to the call stack.
+It's going to check to see if in is equal to one.
+And obviously it is not.
+So it's going to come down here.
+And when I clicked on this again, it's going to push factorial onto the call stack again, this time
+with the number three.
+So notice that both functions on the call stack are named factorial.
+And that's why I did the call stack video I did in the last video.
+It's easier to keep track of this and kind of see what's happening when the items on the call stack
+are called function one.
+Function two.
+Function three.
+In a recursive function.
+It's just going to be called factorial because it's calling itself.
+But these are distinct instances of factorial.
+So I'm going to come up here and we'll step into this.
+Again, the IF statement is going to be false because N is not equal to one.
+We'll come down here and now we're going to get another factorial pushed onto the call stack over here.
+You can see we have three of them now.
+This latest one is with the number two.
+And is still not equal to one.
+So we're going to come down here again.
+And now it's going to get pushed on to the call stack with the number one.
+Now we have four factorial on the call stack, but this time and is equal to one.
+So we come down to the return one here.
+And when it returns, that one is going to pop one of those factorial calls off of the call stack.
+So I'm going to click on this.
+And you can see that we only have three factorial functions on the call stack now.
+And as I showed before in the animations, it's returning it here.
+It is returning it to where this was called with the number two.
+So when I click on this, that's going to get popped from the call stack.
+And this is going to be with the number three and with the number four.
+This will be the final one that gets popped off the call stack.
+And it's going to return that value to here.
+And so for this last one, I'm going to move over from the step into a couple of buttons over to where
+it says continue.
+And when you click on this, it'll just run the rest of the code.
+And I'm going to do this because there's a message that will pop up otherwise.
+So I'm going to click on this and you can see that we have the number 24 that's been returned.
+And that is our recursive function for factorial.

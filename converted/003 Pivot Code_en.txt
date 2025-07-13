@@ -1,0 +1,69 @@
+So now we're going to write the code for our pivot function, so first I'm going to bring up a list
+like this, will represent it like this and will shrink that down into the corner.
+So one of the things about this function is we have two different places where we need to swap items
+inside of the list.
+And we would swap those items with something like this, but since we're doing it twice, I'm going
+to create a function called swap so we don't have to rewrite this code.
+And we're going to use this in two different places in our pivot function, and that will just clean
+things up a bit.
+So let's get into the pivot function itself.
+So we're going to pass this a list, but we also need to give it the pivot index and the end index.
+So what we're going to do here is we're just going to pass it the first index of zero and the end index,
+which is going to be six.
+We have seven items here.
+It'll be zero through six.
+So we've already created our first variable up here, pivot index.
+And that's going to point here.
+Our next variable swap index will just set that equal to the pivot index.
+Like this.
+And then that variable I was part of our for loop will bring that in.
+For I in range.
+And it's going to need the pivot index and the end index for this for loop.
+So I is going to start out at Pivot Index plus one that's going to put it here and then here we say
+and index plus one.
+And remember, the reason for that is the for loop is going to go up to but not including this value.
+And that's why we need to add the plus one.
+So then we're going to compare that first value of I to the pivot value.
+So we'll say if my list at the index of AI is less than my list at the pivot index, well, in this
+case it's not less than so.
+I'm not going to fill out this if statement yet.
+What I'm going to do is color that value in gray.
+And then we'll run through the for loop again, which moves I over one.
+So now this if statement is true.
+So now there are two things that we want to do.
+We want to move that swap index over.
+One, we'll do that like this swap index plus equals one and that moves that over.
+And then we want to swap the items at eye and at swap index.
+So we'll do that like this.
+This is that function that we created at the beginning of the video will pass it, the list, the swap
+index and I and it will swap those two items.
+Now, if we continue running this for loop all the way to the end, our list is going to look like this.
+Now, what we need to do is swap the items at pivot index and swap index.
+And to do that, we're going to use that function again that we created at the beginning where we swap
+two items.
+We'll just swap the items at Pivot Index and swap index and that will do this.
+Now, the only thing left to do is return the swap index.
+So I want to emphasize here, we're not returning the value of four here.
+We're returning the index of three.
+So the pivot function does two things is going to rearrange the items in your list so they'll look like
+this and it will also return the swap index.
+So we'll look at this code in a moment in TVs code, and when we get done running it, our list is going
+to look like this with four in the middle, all the items that are less than will be on the left.
+Everything that's greater than the four will be on the right where we're going to start the list out
+looking like this.
+All right, so now let's flip over to visa code.
+So there is our swap function there that just takes two items in the list and exchanges them.
+Here's our pivot function.
+And then down here, we've created a list called My List.
+This is the list that we just looked at.
+And then we're going to run pivot on my list and then the pivot index is going to be zero.
+That's the first item in the list.
+And then the end index and the list is going to be at the index of six.
+OK, so I'll run this.
+And remember, the only thing this returns is the swap index of three, but we also want to make sure
+that our list has been rearranged the way we want it to be rearranged.
+So we're going to come down here and paste this in where we print my list after we run pivot.
+So I'll run this again.
+And you can see here that four is in the middle and all the items that are less than four are on the
+left and all the items that are greater than four are on the right.
+All right, so that is our function for Pivot.

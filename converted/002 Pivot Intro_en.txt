@@ -1,0 +1,45 @@
+So in this video, we're going to walk through how our pivot function is going to work and Pivot is
+going to be a helper function that we use for quicksort.
+So this is similar to how we use the merged function as a helper function in merge sort.
+So to explain it, I'm going to bring up a list, except we'll show it like this.
+And what we're going to do in Pivot is we're going to pick a pivot point.
+That's going to be the first item.
+Then we're going to have all the items that are less than the pivot value on one side and all the ones
+that are greater on the other side, and then we'll swap these.
+And this makes it where that four value is in the spot where it will be when the list assorted.
+So Pivot is going to do two things.
+It's going to get the list to this point where it looks like this, but it's also going to return the
+index of that for value.
+And we'll talk about why we're going to return the index instead of the value in a moment.
+But for now, I'm going to put this back like this and we'll walk through how we're going to make this
+work.
+So we're going to have a pivot value and then we're going to compare it to everything after that with
+a for loop.
+So the for loop is going to start here.
+We're going to call the variable in the for loop.
+I we're also going to have a variable that points at this pivot point.
+The variable is actually going to be called pivot index.
+But I'm just going to say pivot on the arrow here to make it fit.
+And we'll have another variable called swap index.
+I'll just call it swap on the arrow here also to make that fit and then we'll start running through
+the for loop.
+So the first value for AI is greater than the pivot value.
+So we'll just color that in Ingrey.
+And then I moved to the next index.
+Now this one is less than.
+So what we're going to do is move, swap over one and then we'll swap the values at swap index.
+And I like this.
+Then I will move forward again.
+This one's greater than this one is less than the pivot index value.
+So we'll move, swap up one and then we'll swap these two values.
+This is also less so we'll move swop up.
+Exchange these two and then we get to the end of the for loop and we're done with the eye variable.
+So then what we're going to do is swap the items at the pivot index and the swap index like this, that
+puts four in the correct spot, and the only thing left to do is return that index, that swap index
+that is pointing to the four.
+And this is everything that the pivot function is going to do.
+And the reason we return the index is when we run quicksort again on this side, we're going to do it
+from the beginning up to but not including the swap index.
+And then on the other side is going to be the swap index plus one to the end.
+So that is why we need to return the index, so we'll start coating this in the next video.
+But for now, that is our overview of Pivot.

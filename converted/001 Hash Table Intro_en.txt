@@ -1,0 +1,70 @@
+Now let's look at hash tables.
+So to explain this, I'm going to bring up an address space here addressed zero through seven.
+And for our implementation, this is actually going to be a list.
+So to demonstrate the hash table, I'm going to create a store, a hardware store, and we're going
+to have items and then the number of those items.
+So we'll have nails and nuts and bolts and things like that.
+So I'm going to first start by talking about the built in hash table, which is dictionaries.
+So dictionaries are made up of a key.
+Value pair.
+So nails is the key and 1000 is the value.
+So the way a hash table works is this we're going to need a hash function or a hash method.
+And what we're going to do is perform a hash on the key.
+So we take that key.
+Run it through the hash.
+And in addition to getting our key value pair back, we get.
+An address.
+So we ran nails through a mathematical function and it returned the number two.
+So that's going to be the address where we store that key value pair, and that is how a dictionary
+is stored.
+So now let's talk a little bit about the hash itself.
+There are two characteristics about it that are important.
+The first is that it is one way.
+So if we take nails, we run it through the hash and we get the number two.
+The thing that we can not do is take the two, put it through the hash and have it produce nails.
+It is one way only.
+The other thing about a hash is that it is deterministic, and deterministic means that for a particular
+hash function.
+Every time we put nails in, we expect to get the number two every time.
+That means it is deterministic.
+So this hash is going to embody these two characteristics.
+So even though Python includes a hash table, which is dictionaries, we're going to build our own.
+We'll create our own address space by creating a list.
+And then we'll create methods.
+So in this case, to set an item, we're going to have a key and a value and to use the same key value
+pair as we did before.
+We'll say nails with a quantity of 1000.
+We will create our own hash that we'll use to hash the key.
+And our key value pair is going to be a list and the hash is going to produce an address.
+So at this address in our list, we will put this other list with nails and the quantity of 1000 in
+that spot.
+So that will create a list within a list.
+And let's set another item here.
+We'll say screws.
+We'll run this and we're going to get our key value pair and an address.
+And we'll store that.
+And let's say nuts with 1200.
+And we're going to say that's at the address of two.
+But we do have a problem here because we already have a key value pair at that address.
+We don't want to just overwrite that and replace it.
+So let's bring this back.
+We'll talk about how we're going to do this in an upcoming video, but we will be able to store both
+of these at this address.
+And let's just add one more here.
+Bolts.
+With a quantity of 4500, we get an address.
+And we store that there.
+So now that we have these in place, we can do something like get items, bolts.
+And we can run the hash on bolts.
+And because the hash is deterministic, we know the address where it is stored.
+We can go directly to this address and get the quantity of bolts.
+So let's put that back.
+And we'll run.
+Get item on nails.
+Same thing.
+Deterministic means that we know the address and we come up here and this one is a little bit more complicated.
+We have multiple key value pairs at that address, so we know we're going to have to create some kind
+of loop to go through those.
+To get to the quantity.
+And that is our quick overview.
+Of hash tables.

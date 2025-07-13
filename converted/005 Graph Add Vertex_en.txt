@@ -1,0 +1,41 @@
+Now let's create the add vertex method, and all we're creating here is this and the next video.
+We'll create our ad Edge method and then we'll be able to do things like this.
+But for now, this is all we're creating.
+So when we add the first vertex into the graph, it's going to look like this.
+So let's bring this down here and we'll create this.
+So we're going to say class graph.
+So the first thing we need to do is create a constructor.
+So I added this into the add vertex method because this is a pretty simple constructor, so it'll be
+like this.
+And then we create a dictionary.
+I'll call mine Adjacency list.
+And it's just an empty dictionary.
+So it didn't make sense to create a separate video for that.
+So I went ahead and just added it here.
+But what that creates is this.
+And then the add vertex method.
+Is going to be the part that does this.
+So now let's create that method.
+So we'll say add vertex and we're going to pass it whatever value we want that vertex to have.
+There will add that as a key to our adjacency list and set it equal to an empty list.
+But there is a step we need to do before this line of code because we don't want to have duplicates
+in our graph.
+So to walk through this line here, if vertex not in self dot adjacency list dot keys.
+In other words, if the vertex isn't already in our adjacency list, only then are we going to add it.
+And then we'll return.
+True that we were able to add that.
+And if this is statement equates to false, we'll bypass all of this and return false.
+All right, now, let's go look at this.
+And VTS code.
+So there is our class graph.
+And this is our constructor here.
+I also created a method to be able to print out the graph here.
+And this is the add vertex method that we just created.
+So I'm going to scroll this up.
+And this is where we create our graph.
+We'll call it my graph, and then we'll say my graph dot add vertex with the letter A, and then with
+this line here, we will print out that graph.
+So I'll run this.
+And you can see our new vertex A with an empty list.
+All right.
+So that is our method for add vertex.

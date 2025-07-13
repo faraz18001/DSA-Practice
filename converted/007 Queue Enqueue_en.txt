@@ -1,0 +1,41 @@
+So now let's build our in queue method and in queue is just getting in line.
+So the way we're going to do in Q is going to look like this, and that will add that onto the end of
+our Q.
+So this is one of our possible scenarios for adding an item into the queue.
+The other one is if we have an empty queue in this case, we'll have first and last point to that new
+node.
+So if you're going to code this, go ahead and pause it here.
+Otherwise, I will get into the code.
+So we'll say NCCU.
+We'll pass it a value.
+We'll use that value to create a node like that.
+So the first scenario will code for is if we have an empty queue where we're going to have first and
+last point to that node.
+In other words, it is the first and last item in line.
+So to do this, we have to test to see if the queue is empty.
+And we'll do that by saying if first is none will have first be set equal to the new node like that.
+And we'll also have last set equal to the new node like that.
+So let's add this in with the rest of our code.
+So that is for if we have no items in the list, if we already have items in the list, we'll say else
+let's build out this else statement.
+So we'll say last dot next equals new node.
+That is last dot, next equals new node.
+Then we'll say last equals new node.
+And we'll move that over.
+And that adds that onto the end of our queue.
+So let's add this code in with the rest of our code like that.
+And the only thing left to do is to increase the length by one.
+So we'll look at this code in a moment in VTS code.
+And when we do, we'll build this queue where the first node has a value of one.
+And then we'll run in queue to add a second node with a value of two, and then we'll print this out
+and we should get one and two.
+All right, let's flip over to VTS code.
+OC.
+There is our in queue method there.
+And this is where we build that new queue that starts out with a node with the value of one.
+And this is where we will enqueue a second node with the value of two.
+Down here is where we will print that out and we'll expect to see one and two.
+All right.
+So I'll run this and that has returned one and two.
+All right.
+That is our method for in queue.

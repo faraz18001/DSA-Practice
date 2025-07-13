@@ -1,0 +1,16 @@
+So now let's look at creating an adjacency list.
+That's just going to be a different way of representing this graph that we just looked at in the last
+video.
+And with an adjacency list, we're going to represent this with a dictionary.
+Let's start with our a vertex.
+It has edges with B and E and will represent this in our dictionary.
+Like this A is the key and we'll have a list for the value in our key value pair in the dictionary.
+And that list will hold all of the edges that a has with other vertices.
+So now let's start moving around this circle here.
+So we'll look at B, it has edges with A and C.
+C has edges with B and D.
+D has edges with C and E.
+And then finally E has edges with A and D.
+So now this adjacency list on the right represents the picture on the left.
+And an adjacency list is what we're going to use to create our graphs in this course.
+And that is our overview of an adjacency list.

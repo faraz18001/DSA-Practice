@@ -1,0 +1,103 @@
+So now we're going to do our pop method.
+I'm going to start out by comparing this to a singly linked list.
+So if you'll recall from singly linked list to move tail to the left was an O of MN because you're moving
+tail to the left when all of the arrows are pointing to the right.
+So in order to do that, you had to start at the head and iterate through the entire list to get to
+this point.
+But with a doubly linked list, we don't have this problem.
+We do have arrows pointing to the left.
+So this is going to be much simpler with a doubly linked list.
+Now let's walk through the steps to pop that item off the end.
+So the first thing since we're going to return it, we need to have a variable pointing to it that we'll
+call temp.
+And the next step is to move tail over.
+And we just say tail equals tail dot previous.
+And that's going to move that over.
+Then we need to break the connection between the two arrows that are between that seven and four node.
+So the first one will say tail dot.
+Next is none that breaks that one.
+And then we'll say temp dot previous equals none, and that breaks that off.
+And then we can return temp.
+We do have a couple of edge cases here.
+One for if we only have one node in the list and another one for when we don't have any nodes in the
+list.
+OC So those are the steps.
+If you want to try to code this.
+Go ahead and pause it here.
+Otherwise I will get into the code.
+And we will code for this situation first when we don't have any items and our doubly linked list.
+So we'll say.
+Pop and we'll say if the length is zero, we're going to return none.
+So let's remove this code.
+And now let's look at if we have two or more items.
+First, we'll create that temp variable.
+Temp equals self detail like that.
+So we'll say tail equals tail dot previous, and that moves that over.
+Then we'll say tail.
+Dot next is none.
+And that breaks that connection.
+And we'll say temp dot previous is none.
+And it breaks that connection.
+And then we'll decrement the length by one.
+So let's look at this in with the rest of our code like this.
+So if you'll recall from the pop method in singly linked lists, we had an edge case for if we had one
+item in the list and we pop that off and we're going to handle it with this code here, I'm not going
+to walk through all of the detail here because we walked through this in detail in that video for Pop
+in singly linked lists.
+But we're going to say if the length is zero, we need to set head and tail to none.
+And this is the length being set equal to zero after we decrement it here.
+And then we will return temp.
+So this is very similar to the code that we wrote for singly linked lists for pop.
+And I walked through the code in a particular order in that video because I wanted to teach particular
+things.
+But in this video, what I want to do is clean this code up.
+The problem I have with this code is we have.
+If self length is equal to zero here, and then we have it again down here.
+And yes, this one is after we decrement the length by one.
+But this is not as readable as it could be.
+So what I'm going to do is I'm going to take this if statement and everything inside of it and I'm going
+to move it up.
+In order to do that, I'm first going to remove five lines of code out of this and I will bring all
+five lines back in a moment.
+We're just going to rearrange this.
+So first I'm going to remove those five lines of code.
+And when I move this up, because this does represent the situation where you start with one item,
+I'm going to change that zero.
+In the if statement to a one.
+Then I'm going to say else.
+And we have these three steps again and decrement in the length and returning temp.
+So those are our five lines of code that I've brought back.
+But let's look at how much more readable this is now.
+This is if we have zero items.
+This is if we have one item, then this is for two or more items.
+There is one line of code that I've added here, and that's actually the ELTs and that's it.
+So now let's take this code here and change it back to the way it was.
+It is exactly the same lines of code.
+Just rearranged.
+And much easier to read.
+So we're going to look at this code in a moment in V's code, and we will create this linked list.
+And this allows us to test all three of our scenarios to see if we can pop an item off of a list with
+two or more items, and we'll pop that off and then see if it works with a list with one item.
+And then we'll run it again to see if it works when we don't have any items in the linked list.
+Okay, so let's flip over to VTS code.
+And there is our pop method there.
+And this is where we create our doubly linked list with the items one and two.
+And this is where we print that out.
+So let's just run this.
+And you can see up here that this returns one and two.
+So what I'm going to do here is I'm going to scroll up.
+And I'm going to take this print statement here, this print list.
+I'm going to remove this.
+I'm going to paste in.
+These lines of code.
+So all we're doing here is running pop three different times.
+We're running it for when we have two items and for one item and then for zero items.
+All right, so let's run this.
+So that's going to return to nodes and then finally return none.
+And as we have done before, to test this.
+I'm going to say return to value instead of returning the entire node and run this again.
+And that returns to one and none.
+Which is exactly what we're looking for.
+And then always remember to come back up after you've tested it.
+Remove value so it just returns temp because you want it to return the entire node.
+So it looks like we have a working method for pop.

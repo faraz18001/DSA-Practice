@@ -1,0 +1,22 @@
+So when you're dealing with time, complexity and space complexity, there are three Greek letters that
+you will see, and they are Omega, Theta and Omicron.
+Omicron is better known as O as in Big O.
+So let's take a quick look at what each of these are used for.
+Let's say you have a list with seven items in it and you're going to build a for loop to iterate through
+this list to find a specific number.
+So let's say you're looking for the number one.
+This is your best case scenario.
+You're going to find this in one operation.
+But if you're looking for the number seven, that is your worst case scenario.
+You have to iterate through the entire list to be able to get to it.
+If you're looking for the number four, that's your average case.
+So when someone talks about the best case scenario for running a piece of code, that is Omega, the
+average case is theta.
+And worst case is  Omicron or O.
+A lot of times you'll hear people say, Ok, that's your worst case.
+Big O.
+But what's your best case or your average case?
+Big O.
+Well, there is no best case or average case.
+Big O Technically, that is either going to be omega or theta.
+But technically, when you talk about big O, you are always talking about worst case.

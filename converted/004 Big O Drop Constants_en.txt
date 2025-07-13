@@ -1,0 +1,21 @@
+There are a few ways in which we can simplify our Big O notation, and we'll look at a few of those
+as we go through this section.
+The first that we're going to look at is called Drop Constants.
+So we're going to start this with this same for loop that we had in the last video that was O of n.
+But we're going to make a change to this.
+We're going to add a second for loop right after this.
+It's identical, except we're going to change it from an I to a J, but is otherwise identical.
+They are each going to run n times, so let's flip over to VS Code and have a look at this.
+Okay, so there is our function with two for loops and we're going to run this with the number ten.
+And you can see our output there.
+It goes from zero through nine here and another zero through nine here.
+It's just the exact same thing, running twice.
+So we pass this the number ten here, and it printed out 20 items.
+So let's flip back over.
+So this ran n plus n times or 2n times.
+Now, you might think that we're going to write this as O of 2n, but we can simplify this.
+By dropping the constant.
+So it doesn't matter if it's O of 2n 10n 100n.
+We drop the constant and we just write it as O of n.
+So our first rule for simplifying.
+Is drop constants.

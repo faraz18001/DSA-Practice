@@ -1,0 +1,8 @@
+##[pylyzer] failed c:\users\tesla laptops\videos\dsa-practice\graph\graph.py 1752160943 651
+.Graph: ClassType
+.Graph.G: Never
+.Graph.__call__: () -> graph.Graph
+.Graph.add_node: (self: graph.Graph, node: Obj) -> {False}
+.Graph.add_edge: |R: Type|(self: graph.Graph, v1: R, v2: R) -> NoneType
+.Graph.remove_node: |Type_6357: Type, T: Type, Type_6294 <: Structural({.key = (self: Obj) -> ?6340; .__getitem__ = (self: Obj, ?T) -> ?6348 and (self: Obj, ?T) -> ?6357}), Type_6348: Type, Type_6340: Type|(self: graph.Graph, G: Type_6294, node: T) -> NoneType
+

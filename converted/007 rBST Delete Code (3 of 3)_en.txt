@@ -1,0 +1,61 @@
+So now we're going to do our final video for deleting a node from a binary search tree.
+In the last video, we wrote the code for these three situations and we did that with this code.
+Now we need to write the code for this situation where the item that we're removing has a child node
+on each side.
+And in order to do that, we'll say else.
+And now we'll build out this else statement.
+So for all of the code that we're going to write in this statement, current node will be this 21 node.
+So the first thing we need to do is look at that subtree on the right of that 21 node and get the lowest
+value.
+And this is where we use that helper method that we created in the last video.
+So we'll have a variable that we call Subtree Min, and we'll set it to be equal to min value of current
+node, right?
+And current node, right is that 25 node.
+So the minimum value in that subtree will be 24.
+Now the next step is to take that 21 node and change its value to 24.
+So we'll say current node value equals subtree min and that will change that value to 24.
+And now we just have one more step.
+We need to take that 24 at the bottom and delete it.
+And in order to do that, we need to traverse through this subtree.
+And in order to do this, we need to traverse to the right.
+And this is identical to the line of code that we've already written previously for when we traverse
+to the right.
+So the only difference here is this value that we're passing it, we're passing it Subtree Min.
+And this will kick off the process of traversing through this subtree and deleting this node.
+And this is everything that we need in this statement.
+So I'll put this in with the rest of our code in a moment.
+But first, I want to bring back this node and point something out.
+This node will always be open on the left.
+It will either be a leaf node or it will be a node that's open on the left and has a node on the right.
+And the reason for that is, if you recall from the previous video to find the minimum value, it always
+has to be open on the left.
+So now let's bring this code back and I'll move it down here to the bottom so we can bring in the rest
+of our code.
+So this is a lot of code here, but let's just break this down.
+These lines here will traverse left and right.
+And you will traverse left and right until one of two things happens.
+Either you find out that the value you're trying to delete is not in the tree, in which case you run
+this code here, or you actually find the value and you run this statement.
+And if you find the value, there are four possibilities.
+Either it is a leaf node or that node doesn't have a node on the left, but it has one on the right
+or it has one on the right, but not one on the left, or it has one on the left and the right.
+So those are all of our possibilities.
+I also want to point out one more thing.
+This last line that we wrote in the statement in this video is almost identical to this line here for
+traversing to the right.
+So now let's flip over to VW's code and take a look at this.
+So first, this is that min value helper method that we created in the last video.
+And I'm going to scroll up.
+And this is that double underscore delete node method.
+And we kick off all of our code by running this method down here without the double underscore.
+And I'm going to scroll up again.
+And with these lines of code, we'll create this tree and then we'll print out root and root left and
+root right with these lines of code.
+So it should print out two, one, three.
+Then we're going to delete the two node, and that should create this tree.
+And we'll print that out.
+And it should print out three, one and none.
+So I'll run this.
+And you can see that to start out with, the tree has to one and three.
+And then after we delete the two node that it is three, one and none.
+And that is our method for delete node.

@@ -1,0 +1,37 @@
+Okay now let's look at O of n^2.
+So I'm going to bring up some code from our last video where we had one for loop after another.
+I'm going to take this and I'm going to change it to be one for loop inside of the other.
+Like this.
+We'll get a very different result when we have a loop inside of a loop.
+So now let's go over to VS Code and take a look at this and run this.
+Okay, so there is our function there with our for loop inside of our for loop.
+And then we're going to call that function with the number ten, and I'm going to run that.
+Okay.
+So you can see down here we have nine nine as our last output.
+And if we scroll to the top here, we have zero zero.
+So essentially from zero 0 to 99.
+So we had 100 items print out.
+Okay, so now let's flip back over.
+So when we printed this to the screen, we got n times n items printing out.
+Or n^2, and that's where we get our O of n^2.
+So instead of doing this as two, for loops, one after the other, let's look at what happens when
+we take this one level deeper.
+And then we're also going to print out the K from this for loop.
+Now we have a for loop within a for loop within a for loop.
+Let's take a look at this in VS Code.
+So there is our updated function there with the three for loops.
+Once again, we're going to call this with the number ten.
+And I'll run this.
+This time I'll do it with the right click and say run code.
+And then you can see here at the very bottom there is nine, nine, nine.
+If we scroll all the way up to the top here, it starts at zero, zero, zero, so essentially 0 to 999.
+So let's flip back over here.
+This ran n times n times n times or n^3.
+And you might think that we write this as O of n^3.
+But as you may have guessed, we're going to simplify this and we're going to call this O of n^2.
+So it doesn't matter if it's 0(n) to the 3rd, 4th, 10th, we're going to simplify it as O of n^2.
+So let's take a look at this on the graph.
+So you can see that the line for O of n^2 is much steeper than O of n, and this means it's a
+lot less efficient from a time complexity standpoint.
+And that.
+Is O of n^2.

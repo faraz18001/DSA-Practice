@@ -52,22 +52,22 @@
 # @lc code=start
 class Solution:
     def mySqrt(self, x: int) -> int:
-        left=0
-        right=x
-        res=0
-        while left<=right:
-            mid_point=(left+right)//2
-            if mid_point**2==x:
-                res=mid_point
+        left = 0
+        right = x
+        res = 0
+        while left <= right:
+            mid_point = (left + right) // 2  
+            if mid_point ** 2 == x:
+                return mid_point  
             
-            elif mid_point**2<x:
-                left=mid_point+1
-
+            elif mid_point ** 2 < x:
+                res = mid_point  
+                left = mid_point + 1
+            
             else:
-                right=mid_point-1
-
+                right = mid_point - 1
+        
         return res
-    
 
 solution=Solution()
 print(solution.mySqrt(7))

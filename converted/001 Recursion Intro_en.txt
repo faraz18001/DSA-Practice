@@ -1,0 +1,81 @@
+Now let's look at recursion.
+And if you haven't seen recursion before, this is a topic that typically takes a few times looking
+at this for it to really start to click.
+So what is recursion?
+My favorite definition of recursion is that it is a function that calls itself.
+Until it doesn't.
+So now let's look at a very common example that is used to explain recursion.
+I'm going to bring up a gift box here and we need to open the gift box.
+And the way we open gift boxes is with the open gift box function.
+And when we run the open gift box function, it's going to return either a ball in this case or it's
+going to contain a smaller gift box.
+And if it's a smaller gift box, the way we open gift boxes is with the open gift box function.
+So we'll run that again.
+And when we do, that gift box is either going to contain the ball or it will contain a new, smaller
+gift box.
+So now we're going to run the open gift box function again.
+And in this case, we'll just say that we found the ball.
+Okay, so now let's put this back and we'll look at some code.
+Now, I want to emphasize this is pseudo code.
+This is not code that will actually run.
+It's just, for example.
+So we're going to create our function open gift box.
+And we're going to say if when we open the box, it contains a ball.
+So if ball, we will return that ball.
+Otherwise it's a gift box.
+In which case we need to run the open gift box function.
+And this is where the function calls itself.
+So there are a couple of things about recursion that are very important.
+First, the process of opening each new box is the same, or the process of whatever we're doing with
+recursion has to be the same.
+The other key point is each time we open a box, we make the problem smaller.
+So now let's walk through this code with our boxes.
+So we'll say open gift box.
+And when we do, we'll check to see, is this a ball?
+In this case, it's not.
+So we have to run the open gift box function again.
+So it calls itself.
+So this is a second instance of the function that we're putting on the call stack.
+And we'll talk about call stacks further in the next video.
+So though, we're going to check to see if this box contains a ball.
+It does not.
+So we have to run another instance of open gift box.
+This is going to call itself again.
+So now we run another instance of the function.
+Now, when we check to see if it's a ball, it is a ball.
+And because this is a return, we will not run this line of code and we stop having the function call
+itself.
+Because we have this return method here.
+So you have to have this and your recursive function.
+So now let's put this back again and talk about a couple of concepts here.
+When we open this box and it contains the ball, this is what we call our base case.
+This is when we are going to stop opening boxes or the function will stop calling itself.
+If it needs to call itself Again, this is called a recursive case.
+This is also a recursive case.
+And this is the base case.
+Let's bring our code back in here When this if statement is true, that is our base case.
+And it's very important to have this because if you don't, will remove this.
+The function.
+Gets called and then it calls itself, which creates another instance of the function, and that's going
+to call itself.
+And then we create another instance of the function and so on.
+And this will create what is known as a Stack overflow.
+So you have to have a base case where this will at some point stop calling itself.
+And there are a couple of things about this that are very important.
+First, this if statement has to be true at some point so you can't have something like this.
+Because one is never greater than two.
+This will never be true, and you will loop through this infinitely and create a stack overflow.
+And you might be saying, Well, that's pretty obvious.
+That one is never going to be greater than two.
+But sometimes we have if statements in our code that are very complicated and it's not obvious that
+the if statement is not going to ever be true.
+So if you get a stack overflow in a recursive function, this is one of the places to go troubleshoot.
+So let's put this back.
+The other thing is that you have to have a return statement if you have something like this that doesn't
+return anything.
+The if statement becomes true, you print Hello world.
+And because it is not a return statement that causes us to stop running code, it just goes right to
+the next line and we go right back into our loop and have a stack overflow.
+So it's very important that you have the return statement in your code.
+And that is our quick overview.
+Of recursion.

@@ -1,0 +1,55 @@
+Now let's look at O of log n and to demonstrate this, I'm going to bring up a list that has items one
+through eight in it.
+And for what I'm about to do here for this demo, you have to have sorted data.
+And what we're going to do is find the most efficient way of finding a number in this list.
+So we're going to look for the number one.
+And of course, we're not going to know where it is in the list.
+We have to find the most efficient way that would work for finding any number.
+So this is what we're going to do.
+We're going to take the list.
+We're going to cut it in half and say, is it in the first half or is it in the second half?
+Well, it's not in the second half.
+So we can remove that.
+And now we only have to search through this many numbers and that we'll do it again.
+It's not in the second half and we can remove those.
+We do it a third time and we find the number that we're looking for.
+So let's bring all of these numbers back and count how many steps we had to find.
+The item that we were looking for.
+It was one.
+Two.
+Three steps.
+So we had eight items in the list and it took us three steps to find a number.
+And it just so happens that two to the third power is eight.
+So we're not going to get heavy into the math and logarithms and things like that.
+We're just going to do something basic here.
+But I'm going to take this equation here and turn it into a logarithm.
+2^3 equals eight is the same as saying log sub two of eight equals three
+So let's put this back again and watch how all the numbers move.
+So what you're basically saying is two to the what power equals eight two to the what power equals eight.
+Well, it's two to the third power.
+Another way to look at this is how many times you have to take the number eight and divide it by two
+to get down to one item.
+And that is three times.
+But the real power of this is when we have very large numbers.
+Let's say we have log sub two of this number.
+This is over a billion.
+How many times do you have to cut this number in half to get down to one item and that is 31 times.
+So if you think about a list with a billion items in it, if you're going to iterate through that linearly
+from beginning to end, you could have over a billion operations.
+But if you do this process of cutting it in half repeatedly, you can find any number in that list in
+31 steps.
+And that is the power of O of log n.
+So now let's take a look at this on the graph.
+You can see that it is very flat, very efficient.
+Not as flat as O of one, of course, but it is far more efficient than O of n or O of n squared.
+So these four are going to be what we see for most of the course.
+But there's one other I want to show here and that is O of n times log n that is used with some sorting
+algorithms and we'll see a couple of those in this course merge sort and quicksort.
+And this is the most efficient that you can make a sorting algorithm.
+Now there are some sorting algorithms that can sort just numbers that are more efficient than this.
+But if you're going to sort various types of data, you're going to sort strings.
+This is the most efficient that you can make a sorting algorithm.
+But for the rest of the course, other than those sorting algorithms, these will be the four that we
+see.
+All right.
+That is our overview of O of log n.

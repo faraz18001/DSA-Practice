@@ -1,0 +1,69 @@
+So now we're going to code selection sort, and this is where we left off in our last video, I'll shrink
+this down and we'll start running our function.
+So we'll say selection sort will pass it this list.
+And now the first thing we have to do is create a for loop to loop through the list.
+So if you'll recall from the last video, we only went through indexes zero through four, and once
+you do that, everything is going to be sorted.
+So we're going to do this for the range of the length, minus one.
+Now for our next line of code, I'm going to enlarge this.
+This is going to be I hear I from the for loop.
+And remember, we set men index to be equal to zero.
+Well, that's actually going to be I.
+So let's shrink this down and put this in with the rest of our Code Men index on each one of these loops
+through this for loop is going to need to be set equal to I.
+And once we do that, we need to compare the item at men index to all of the other items after that
+in the list.
+So we'll have a separate for loop for that that looks like this.
+Because we're looking at everything after the index of AI, we're going to start at AI plus one, so
+this is going to be our start value for our for loop and this is going to be our end value.
+And remember the end value we are going up to, but not including this value.
+So the length is six.
+That means we're going to go up to the index of five.
+So let's enlarge the graph here and look at what that looks like.
+So for the first iteration, this is going to be I and then Jay is going to be I plus one.
+And men index is going to be equal to I.
+Which is going to be the index of zero in this case.
+Then we're going to compare that to the value at the index of J and that one is lower, so we're going
+to set men index to be equal to J.
+But we're only going to set men index equal to J.
+If the value at J is less than what we had previously stored at Men Index.
+So this shrink this down and take a look at that.
+Let's bring our code back.
+We'll need an if statement that says if the item at the index of J is less than the item at the Index
+of Men Index, then will set men index equal to J.
+So listen, large this again, and in this case, men index being equal to J means that it's equal to
+one and that second for Loop is going to move the J through the list like this.
+And if we see another item that's less than men, index such as this will set men index equal to J again,
+which in this case is for.
+And there will continue to the end of the list like this.
+So now that that second for loop is done running, we know that men index equals four and we need to
+take the item at the Index of Men Index and the item at the index of I.
+And swap them.
+And once we do, that first item will be sorted, so let's shrink this down.
+And we'll be able to swap those two items with these three lines of code, I'm not going to walk through
+these because this is very similar to what we did in Bubble sort to swap two items in the list.
+But there is a scenario where you don't want to run these three lines of code.
+And to walk through that, I'm going to enlarge this again the second time through the first four loop.
+This second item is going to be I.
+And Jay will be my plus one, so it'll be that next item over and you can just look at this and see
+that the item at the index of I is going to remain the men index after we're finished.
+And that index is going to be one I'll put that up there.
+But that second for loop with the just is going to go through to the end of the list like this, and
+we don't have an item that needs to be swapped.
+So we have a situation where men index is the index of one and the index of AI is equal to one, so
+we know that the item at the index of AI is sorted.
+I'll go ahead and color that in green and I'll shrink this down and bring in those three lines of code
+that are used for swapping items.
+We don't want to run these three lines of code in this situation.
+So we're going to say if I is not equal to men index, only then do we want to run these three lines.
+In other words, if I in an index are equal, we don't want to run these three lines.
+Now, let's put this in with the rest of our code like this, and if we run this code to completion,
+it will make our list look like this.
+And the only thing left to do would be to return.
+The list.
+Now, let's go look at this in VS code.
+OK, there is our selection sort function, and then we're going to call that function here with that
+same list that we were working with before, and we will print the results.
+So I'll run this.
+And that returns a sorted list, one through six.
+And it looks like we have a working function for selection sort.

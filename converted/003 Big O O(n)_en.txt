@@ -1,0 +1,25 @@
+Now we're going to look at our first Big O and I start with O of N, not because it is the most efficient
+or least efficient Big O, but because I think it's the easiest to explain.
+Easiest one to get your head around.
+So we're going to explain this with some code.
+So we're going to create a function that we're going to call print items.
+We're going to pass it a number n and we're going to have a for loop that runs n times and then we're
+going to print i from the for loop.
+Pretty simple.
+So let's flip over to VS Code and have a look at this.
+Okay, so there is our function and then we're going to call it here with the number ten.
+So I'm going to run this.
+And you can see over here that it printed out zero through nine.
+So there were ten items that were printed to the screen.
+So let's flip back.
+So this is an example of something that is O of n we passed it the number n.
+And then it ran n times, there we're n operations.
+So whatever n was that was the number of operations.
+So that's O of n.
+Let's take a look at this on a graph.
+So on this graph, on this bottom axis that's n and on the other axis, this is the number of operations.
+So O of n is always going to be a straight line.
+It is what is called proportional.
+So if you hear the word proportional when it comes to Big O, that is going to be O of n, So we'll
+be adding to this graph so we can compare one to another.
+But for now that is O of n.

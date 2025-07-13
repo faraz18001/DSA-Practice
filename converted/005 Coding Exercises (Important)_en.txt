@@ -1,0 +1,21 @@
+So now that we're getting into writing the code for our first data structure, I want to remind you
+of the two different ways you can access the coding exercises in this course.
+So I'm going to flip over to the course and then if you come up here to the constructor video, the
+one we just watched and you click on the resources tab, underneath that tab there is an exercise file.
+If you click on this, that is the exercise that goes with that video and you can access the same exercise
+file by scrolling to the bottom down here and clicking on coding exercises.
+And all the same coding exercises are down here.
+So I'm going to click on this one for the constructor.
+It's the same one we just downloaded that, that will load this and I've marked out exactly where you're
+supposed to write the code.
+Or you can see here it says write node constructor here and linked list constructor here and I already
+have the correct code copied.
+I'm just going to paste it here and then you come down here where it says Check solution and it says,
+Well done, your solution is correct.
+So you can write all of this code down here as well.
+And if you do get stuck, I do have the solution over here and that's the same code that I just copied
+in.
+So I'm going to encourage you to take a moment and do this coding exercise for the constructor.
+And then if you look over here, you can see that there are dozens and dozens of these coding exercises
+that will be used throughout the course.
+And I cannot emphasize enough how important it is to do the coding exercises.

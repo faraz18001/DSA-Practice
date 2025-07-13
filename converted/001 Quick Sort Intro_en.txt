@@ -1,0 +1,35 @@
+So now let's look at our overview of quicksort, we'll start out with a list like this, except I'll
+put it like this.
+And the way Quicksort works is we start with a pivot point that's going to be that first item.
+Then we're going to compare each of the numbers after that to this to see if it's greater than or less
+then.
+So we start with the six.
+The six is greater than and I'll color that in grey.
+The one is less than I'll color that in yellow, all the lessons will be yellow and the greater the
+fans will be gray and then what we're going to do is swap that one with the first item that was greater
+than.
+Like this, then we move to the seven McCullogh that in gray, the three is less than and we'll swap
+that with the first item that was greater then, which is the six like that.
+The two is less then.
+And we'll swap that with the seven because the seven is now the first item in the list that is greater
+than the four like this.
+And then the five is greater then.
+So we have all of the items that are less than the four together and all of the items that are greater
+than the four together.
+And then in the next step will swap the four with the last of the less than items like this.
+So two things to point out here, first, the four is now sorted, I colored that in green and everything
+less than the four is to the left of the four.
+Everything greater than the four is to the right of the four.
+And then what we're going to do is run quicksort again on these items as well as on these items will
+start on the left.
+First two will be our pivot in this case.
+One is less.
+The three is greater than we swap these two items and now the two is sorted.
+Then we'll run quicksort on these two, and because there's only one item in each of these, we know
+those are sorted that will run quicksort on this side, the pivot is going to be six.
+Seven is greater, five is going to be less.
+We're going to swap these.
+And they will swap these the six is sorted.
+All right, quicksort omnis and because there's only one item in each of these, we know these are sorted.
+And now we have a completely sorted list.
+And that is our quick overview of quicksort.

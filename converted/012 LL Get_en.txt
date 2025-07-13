@@ -1,0 +1,65 @@
+Okay, so now let's do get.
+And forget.
+Instead of showing a diagram, I'm just going to show the first line of the method.
+We're going to pass it an index and then it's going to return the node at that index.
+So if you want to code this, go ahead and pause it here.
+Otherwise, we will get into the code.
+So forget because we're going to use an index.
+I'm going to show the indexes with our linked list.
+I'm going to start with something that might seem obvious in this situation.
+We can get something at the index of zero one, two or three.
+But it is possible that someone could pass this method and index of negative one.
+It could pass in an index of four.
+So we have to test for this first to make sure that we have a valid index.
+So we're going to say if the index is less than zero or the index is greater than or equal to the length.
+Then we're going to return none, because obviously we can't get a node at any of those indexes.
+So we have to start with this.
+Now let's look at getting a valid index.
+We're going to have a variable called temp.
+We're going to have that point to the head.
+We'll do that like this temp equals self dot head.
+And I'm going to remove head and tail and just leave temp there.
+So whatever the index is, that's going to be the number of times we have to move temp over.
+So then we'll create a for loop that is going to run that number of times and that will get us to the
+correct node.
+So we'll say four underscore in range index.
+So if it's an index of two, the range is going to go from 0 to 2.
+And we'll talk about that underscore here in a second.
+In case you've never seen that.
+And then we'll say temp equals temp next, and that will move temp along the link list.
+Normally we have a variable in this spot.
+A lot of times we will call that I.
+But you're only supposed to put a variable there if it's going to be used inside of the for loop.
+For example, you could say print I.
+And that is using the I inside of the for loop.
+If you're not going to use the variable in the for loop like this, we replace the AI with an underscore.
+Okay, So now back to our for loop and moving that temp variable along.
+If this was a two, we'd go one, two.
+And then temp would be pointing at the node that we want to return.
+And once we've done that.
+We can just say return temp.
+Now let's look at this code and with the rest of our code.
+Now, this was all pretty straightforward here.
+The only real gotcha that you may not have thought about is this part here to test to see if the index
+is valid.
+All right.
+So we'll look at this code in a moment.
+In V's code.
+And when we do, we will create this linked list zero through three.
+And in this situation, each value of a node is equal to the index of a node.
+So we're going to say get the node at the index of two and that should return the node with the value
+of two.
+So let's flip over to VS code.
+There is our jet method there.
+And this is going to build our linked list with values zero through three.
+Then down here, we're going to get the node at the index of two.
+And remember, that should be the one with the value of two.
+So let's run this.
+And once again, you can see that it's just returned a note.
+So we'll come up here and add value to make sure it's returning.
+The correct node and then we will run this again.
+And that returns the value of two.
+All right.
+So I will remove the dot value from our get method here.
+And it looks like we have a working method.
+Forget.

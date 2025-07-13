@@ -1,0 +1,37 @@
+So the binary tree we looked at in the last video was a binary tree, but it wasn't a binary search
+tree.
+In order for it to be a binary search tree, the nodes have to be laid out in a particular way.
+So let's take a look at that.
+So let's say we have one node in our tree and we're going to add another node with a binary search tree.
+If the number is greater than it's going to go on the right of that node.
+And if it's less than it's going to go on the left of that node.
+And because 76 is greater than we're going to place it there.
+Now, let's take a look at another node.
+The 52 is greater than 47, and we're always going to start by comparing it to the node at the top.
+And because it's greater than we're going to go to the right, but there's already a node there.
+So what we're going to do is we're going to compare that 52 to the 76 and because it's less than 76.
+That goes on the left of that node.
+So let's look at another node at 21.
+We're always going to start at the top and because the spot to the left of the 47 is open.
+We'll place it right there.
+So let's just look at a few more here.
+We'll say 82.
+We'll start at the 47.
+It's greater than we'll go to the right.
+We'll compare it to the 76 is greater than, again, in this case, that spot is open.
+So we'll place it.
+18.
+It is less than 47.
+So we go to the left and we look at the 21.
+It's less than the 21 that spots open.
+So we'll place that there.
+And one final node, we'll start at the 47.
+It's less than we go left to the 21.
+27 is greater than the 21.
+So we place that on the right.
+So a couple of things to point out about a binary search tree.
+If you take any node in the binary search tree, all nodes below it to the right are going to be greater
+than that node.
+Everything on the left is going to be less than.
+And that is our overview.
+Of binary search trees.

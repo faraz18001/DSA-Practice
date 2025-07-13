@@ -1,0 +1,27 @@
+OK, so now let's look at depth first search in order, we'll bring up our tree like this, and what
+we're going to do is we're going to visit that first note.
+We're going to go to the left, go to the left again.
+The 18 will try to go to the left.
+There's nothing there will right that 18 to our results list and then it'll go to the right.
+So at this point, the tree looks exactly the same as it did at this point with depth, first search
+post order.
+But instead of going left, then right and then writing, its value is going left, writing its value
+and then going right.
+So we're going to get this in a different order.
+So now we're going to come up to the 21 it has gone left.
+Now it's going to write its value and then go write the twenty seven will go left, right its value
+and then go right.
+That brings us up to the forty seven note.
+It has gone left now we can write its value and go right to 76.
+We'll start out by going left.
+The 52 will go left right it's value and then go write.
+The 76 has already gone left.
+Now we can write its value to the results list and then go right.
+Then the 82 will go left and then right its value and then try to go right.
+So at this point, what I'm going to do is turn the entire country back to blue and look just at the
+order that the items get written to the list, we start out with the 18 being written to the list.
+And this is the lowest value in the tree that it's the twenty one, the next lowest and so on than the
+47, the 52 and the 76 and the 82.
+So all of the numbers are written to list in numerical order.
+So that is depth.
+First search in order.

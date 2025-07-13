@@ -1,0 +1,37 @@
+Now let's create our keys method.
+And what we're going to do with this is we're going to take all of the keys out of the hash table,
+put them into a list, and then return that list.
+So in order to do that, we're going to need a for loop that goes through our data map list and then
+moves across to see if there's anything in any of these addresses.
+Until it gets to an address where there is something there and then we'll have another for loop that
+loops through the keys in this list.
+All right, so let's start writing this code.
+We'll say keys, and then the first thing we'll do is create that list that we're going to put the keys
+into.
+I'll just call it all keys.
+Then we'll create the for loop that moves through the data map list the zero through six.
+Then we'll create a second for loop to go through this list here.
+So we'll do that like this.
+Notice it's almost identical to the one on top, but we've added this here.
+So that creates our two for loops, but this second for loop, we only want to run it if there is something
+at the address.
+So take for example, the index of zero down there.
+There isn't anything there, zero is none.
+So we don't want to run this for loop.
+So we're going to say only if there is something there.
+If it is not nun only then do you run that for loop.
+Then we just need to write the keys to the all keys list that we created.
+So we'll say all keys don't append, and that will take the particular key that we're looking at as
+we're going through these four loops.
+And then we will add it to that list.
+Then the only thing left to do is to return that list.
+Okay, so that is our code for the Keys method.
+So let's flip over and take a look at this in VW's code.
+So there is our keys method there, and this is where we create our hash table.
+And then here we'll add bolts washers that we saw before.
+I'm adding lumber in this case.
+Then down here we'll say print my hash table keys.
+And that should return that list with the three keys in it.
+Okay, so I will run this.
+And there is our list with bolts, washers and lumber.
+And that is our method for keys.

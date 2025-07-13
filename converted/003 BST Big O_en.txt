@@ -1,0 +1,105 @@
+So now we're going to look at binary search tree bigo.
+In order to do this, we'll have to do some simple math.
+So the number of nodes in this tree right now obviously is one.
+But you could also write this as two to the one minus one.
+Two to the one is two minus one equals one.
+And you'll see why I'm doing this here in a second.
+But if we have a second level like this, this is two to the two minus one, two to the two is four,
+minus one is three.
+Two to the three minus one, two to the four minus one.
+Now, as we get into very large numbers here, that one is insignificant.
+So let's remove this and we'll say this is approximately two to the four nodes.
+This is approximately two to the three and two to the two.
+And due to the one.
+Now, if you're going to look for a node in this tree, it's going to take.
+One step, obviously.
+But when we go to two levels, let's say we're going to look for the number 76.
+That is one two steps.
+So we have two to the two nodes approximately, and it took us two steps to find something.
+Let's say we're going to look for the number 27.
+It is one, two, three steps.
+And if we were going to look for the number 49 in this case, it would be one, two, three, four steps.
+We have two to the four nodes, and it took four steps.
+So it's four steps to find something.
+It's four steps to remove something because you have to iterate through the list, find the node, and
+then remove it.
+And it's also four steps.
+If we're going to add a node, if we're going to add a node under that 49, we would have to iterate
+through four steps and then we could insert it.
+So that means that all of these are o of log in and O of log in is very efficient.
+So remember o of log in is achieved by doing divide and conquer.
+So let's bring our tree back here and show how it is that we're doing that.
+So if we're going to look for that 49 node again, we start at the top.
+And then we go, Right.
+And when we do, we just made it where we never have to look at anything that's on the left of the 47.
+So we are effectively removing these from the search, and that's not a big deal when you have a small
+tree like this.
+But if you had a million items in the tree, you just made it.
+Where there are half a million items that you don't have to look at.
+And then from here, we're going to go left.
+And now we have made it where half of the remaining nodes don't need to be looked at like that.
+And then we finally come down to the 49 node, and we have done that again.
+And that is divide and conquer.
+So let's bring all of this back.
+So for our examples, for calculating time complexity, so far we have used a perfect tree.
+And a perfect tree is going to give you your best possible scenario.
+And remember, we measured best possible scenario with Omega.
+You're more likely to see a tree that looks like this.
+But even in this situation, you would say that this is roughly log in.
+But now let's look at our worst case.
+Our worst case would be if we had a node and then the next one was greater than.
+And it goes to the right and the next one is greater than that.
+And it goes to the right of that one.
+And the next one is greater than that.
+And it just keeps going on and on in a straight line.
+If the tree never forks, it is essentially.
+A linked list.
+So let's say we want to go look for the 91 node.
+How many steps would it take?
+It would be one, two, three, four.
+And we have four nodes in the tree that is o of n.
+So the big o of a binary search tree technically is o of n not o of log n.
+So let's bring our other nodes up here like this.
+What we assume with a binary search tree is it's not going to be a straight line.
+We're not going to have that worst possible scenario and we treat it as if it is o of log n.
+We don't treat this like an o of n data structure.
+So for lookup, insert and remove.
+We treat this as if it is o of log n.
+Now let's compare this to a linked list for lookup.
+Insert and remove.
+So if we're going to do lookup with a link list, say we're going to look for the number 91.
+We start at the beginning and we iterate through the list until we get to the number 91.
+And because we have to iterate through this is o of n.
+So a binary search tree is better than a linked list in this situation.
+How about if we're going to remove an item and we're going to remove it by value?
+Once again, if we use the 91 as our example, we're going to iterate through the list, get to the
+91, we're going to remove that.
+That's O of N because we had to iterate through the list.
+Also in this situation, a binary search tree is better.
+Now let's look at insert.
+Our linked list here is sorted, but there is zero advantage in a linked list to sorting your data.
+So if you're going to insert a node.
+You would just append it to the end.
+And that is of one.
+So I want to point this out because if you get a question, say in an interview and they say we need
+to be able to add data to a data structure very quickly.
+But retrieval speed is not very important because we're not going to go retrieve things very often.
+But we could have bursts of data coming in and we want to make sure nothing gets dropped.
+So we want this to be able to be added as quickly as possible.
+If you're going to choose between a binary search tree and a linked list.
+Which one would you choose?
+Well, the link list is better for that situation.
+There is no data structure that is the best answer in all situations.
+That's why it is important to understand the big O of all of the operations that you would do with a
+particular data structure.
+So let's look at all three of these side by side between linked lists and binary search trees.
+So insert is faster for a link list because we can just add an item onto the list and it's o of one,
+but lookup is o of log in for a binary search tree and the same is true for remove.
+And if you look at lists and you compare them to binary search trees, all of that is the same.
+Inserting an item, you can just put it on the end of one, but look up and remove by value will be
+o of n.
+Now, if you're looking up by index, obviously that's very fast.
+But if you're looking up a value or removing a value, you have to iterate through the list.
+And that is our overview of binary search tree.
+Big.
+Oh.

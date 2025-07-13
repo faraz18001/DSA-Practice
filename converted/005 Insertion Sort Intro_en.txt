@@ -1,0 +1,23 @@
+Now, let's look at how we do insertions sort of to bring up this list here and with insertions sort,
+we always start with the second item in the list.
+And then what we do is we compare it to the item before it, if it's less than the item before we're
+going to do this and we'll drop that in to the correct spot, then we go to the next item and we do
+the same thing.
+We compare it to the item before that this one is not less than so.
+We don't move this one.
+This one, we compare it to the six, we move this over, we compare it to the four.
+It's not less than the four.
+We dropped that in.
+And then the one we're going to compare that to the six and the five and the four and then finally the
+two, we put that there, we drop this.
+And that was actually going to be a special case, the one that goes all the way to the beginning.
+And we'll talk about that when we code that.
+And then the last one here will move this over until we finally compare it to the two, it's not less
+than the two.
+So that one goes there.
+And then once that three gets dropped in there, that's the last item.
+And that means that the entire list is sorted.
+In the next video, when we code this, we're going to start out with a list that looks like this.
+We're just going to swap these two items to make things a little bit easier so we don't have to walk
+through as many steps.
+And this is where we'll pick up in the next video when we code insertion sort.

@@ -1,0 +1,79 @@
+So now let's create our constructor for our linked list and we're going to start it out like this with
+classes, we're going to capitalize the name of the class.
+So that names the class and then we'll build out the constructor.
+Like this.
+And we saw this in the class video that we start with a double underscore, then a nit to initialize
+this and another double underscore and that there's always going to be self as one of the parameters.
+And this is how you tell that this is a method inside of a class instead of a function.
+And there were also in this case, going to have value as a parameter, and we're going to use that
+to create the first node at the time that we initialize the link list.
+But before we get into building out this constructor, I'm going to bring in just the first line of
+three other methods that the constructor has a couple of things in common with, and you'll see why
+I'm doing this in a second.
+They are append.
+Prepend and insert.
+So the first thing these all have in common is that we pass a value to all of these.
+And to show you the other thing, these all have in common.
+Let's look at what each one of these does.
+So the constructor, it is going to create a node.
+It's also going to initialize the new link list, but it's going to create a node.
+The append method is going to create a node and then add that node to the end.
+Prepend is going to create a node and add that node to the beginning inserts going to create a node
+and then insert that node at whatever index where you want that.
+So you can see these all create a new node.
+So we don't want to write the code for creating a new node for different times.
+So what we're going to do is we're going to create a class that does nothing but create nodes, and
+we're going to call that class.
+Note.
+So when any one of these four methods needs to create a node, it will call on.
+The node class to create it.
+And the only thing this is going to contain is a constructor that we're going to pass a value so we
+can assign it to the node.
+As for the rest of the constructor, let's look again at what a node is.
+It is really this.
+So the node is going to contain value.
+And next.
+And when you have variables that apply to a specific instance, remember we use the self keyword, self
+value and self dot next.
+So the constructor for the node is going to look like this.
+So when we call on the node class, we're going to pass it a value.
+That is what this is here.
+And then it gets passed to the specific instance of Node.
+Now that we have a way of creating nodes, we can build out our linked list constructor.
+So let's bring this back.
+And our constructor is going to start off like this.
+So we're going to pass it a value so we can create the first node in the linked list at the time that
+we create the linked list.
+So we're going to have a variable new node.
+And then it's going to be equal to Node with a capital N.
+That means it's going to call the node class and we're going to pass this value here to the node class
+and that creates the node.
+Then we say self head equals new node.
+So we'll bring the head in here and that points to the new node.
+Also self dot tail equals new node.
+Now we have tail also pointing to the new node.
+And then we're going to keep track of the length.
+So we're going to start the length out by being equal to one.
+And that is our linked list constructor.
+Now that we have this, we can create a new linked list and we could do it like this.
+My linked list equals linked list.
+Notice this has the capital L It is calling the Linked List class and we are passing it the number four.
+And by writing this line here, the my link list, you are creating all of this.
+You have created a head and a tail.
+It points to the new node.
+It assigns the value of four to that new node.
+And gives the linked list a length of one.
+So let's go over to VW's code and we'll look at our constructors that we've created, one for the node,
+one for the linked list, and then run this line of code here and look at what it creates.
+Okay, so let's work through this in reverse.
+We're going to print my link listed value.
+That's going to be the value of that first item, and we create that first item in the link list.
+When we create my link list and set it equal to link lists, we pass it the number for.
+And that's going to initiate this linked list constructor.
+The Linked List constructor is going to create that first node with this line here.
+Which calls the node class and creates the node.
+Once we've created the node, we have head and tail point to it here, and that's why we can come down
+to here where it says Print my linked list, dot head, dot value and be able to get to that value.
+So I'm just going to run this.
+And that gives us that value of four of that first item.
+All right, so it looks like we have a working linked list constructor.

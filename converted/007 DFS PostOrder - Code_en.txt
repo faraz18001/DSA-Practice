@@ -1,0 +1,78 @@
+So now let's write our code for depth, first search post order, we'll bring up our tree here and our
+call stack and then we'll start writing our method by saying DFS postal order, and then we'll create
+our list results that we're going to return at the end of this.
+And I'll bring that up from the bottom here.
+And with depth.
+First search preorder.
+We had a function called Traverse.
+We're going to do the same thing here.
+And I must start by bringing in the exact same traverse function.
+So this is exactly the way you would write reverse for preorder, so in preorder, we wrote the number
+to the list and then we went left and then we went right.
+But for post order, we're going to go left first and then right and then append the value to the results
+list.
+So we have all the same code.
+It's just in a different order.
+So I'm going to move this up like this and we'll kick this off by running traverse on the route.
+And when we do, that gives us an instance of the traverse function that is added to the call stack.
+Now 47 is going to look to the left.
+First, there is an item on the left.
+That's the twenty one node.
+So now we're going to run traverse on the twenty one note.
+The twenty one node has a node to the left, which is the node.
+So that will get added to the whole stack.
+The node is going to look to the left, then it will look to the right, and then finally it will append
+its value to the results list like this.
+And once it does, we're done running that instance of traverse so we can pop that from the call stack.
+Now, the twenty one is at the top of the call stack again.
+It has already gone to the left.
+Now it can go to the right and there is a note on the right.
+The twenty seven notes will add that to the call stack.
+The twenty seven node is going to look left, it will look right and then finally it will append its
+value to the results list like this.
+And then we can pop that from the call stack.
+So now the twenty one is at the top of the call stack again.
+It's already gone.
+Left.
+It is already gone.
+Right.
+The only thing left for the twenty one to do is to append its value to the results list.
+So we'll do that and then we'll pop twenty one from the call stack.
+So now the 47 is at the top of the call stack again, it has already gone left.
+Now it can go right.
+So now we'll run Traverse on the 76 node and the 76 node will look to the left to see if there is a
+node there.
+There is the 52 nodes will add that to the call stack.
+The 52 will look left.
+It will look right and finally append its value like that.
+And we can pop that from the call stack.
+The 76 has gone left.
+Now it can go right.
+So we'll add the 82 to the call stack.
+It will look to the left, it will look to the right, and then finally append its value to the results
+list like that will pop that from the call stack.
+Now, the 76 is at the top of the call stack.
+It has gone left.
+It has gone right now.
+It can append its value to the results list like that and will pop that from the call stack.
+And then finally, the 47 node, the one we kicked all of this off with, it has gone left.
+It has gone right.
+And now it can append its value to the results list like this.
+And now we can pop that one from the call stack.
+And that was the original function call.
+So now the only thing left to do is to return the results list.
+So now let's take this code and add it in with the rest of her code like this, and that is our entire
+method for depth, first search post order.
+So we'll look at this in a moment in LVS code.
+And when we do, we'll create this tree and then we'll expect to get this list returned.
+All right.
+So let's flip over to LVS code.
+So there is our depth first search postal order method there.
+And I'm going to scroll up.
+And this is going to create that tree that we just looked at and this is where we'll run depth first
+search post order on that tree and print out the results.
+And when we do, we would expect to get this list here.
+All right.
+So I'll run this.
+And that gives us the list that we were expecting.
+All right, so that is depth first search post order.

@@ -1,0 +1,70 @@
+Now let's create our method to remove a vertex.
+So let's bring this up.
+We're going to remove the DX vertex.
+But before we can remove that vertex, we have to remove all of the edges that vertex has with other
+nodes.
+And it is only then that we can remove the vertex.
+So let's bring this back.
+Put our edges back like that.
+And this is what that graph will actually look like.
+So I had mentioned in the big O video that there would be an efficiency that we could use in graphs
+that have bidirectional connections.
+And the efficiency is contained in this list.
+We know that if DH has an edge with another vertex, that vertex also has an edge with DH.
+So, for example, right here, this edge that D has with A lets us know that A also has a connection
+back with DX.
+So in a moment, we're going to create a for loop that just loops through this list.
+And the variable we'll use in the for loop will be called other vertex.
+So in this iteration of the for loop, other vertex is a.
+And we'll go through its list of edges and remove DX.
+We'll cycle through the for loop again.
+Other vertex is B.
+We remove DX from that vertex.
+And then we'll do that for C as well.
+And now that we've removed all the edges, we can come down here and remove this vertex.
+So let's say we had a situation where the graph had a thousand vertices.
+We would only have to go to these three to remove edges with DX.
+And that is a huge efficiency.
+So our graph now looks like this.
+We've removed the edges and we have removed the node.
+Okay, so now let's start coding this.
+We'll say remove vertex and we'll pass it the vertex that we're going to remove.
+And the first thing we need to do is make sure that Vertex actually exists in our graph.
+And if it does, we will use this for loop to go through that list of edges associated with DX.
+So then we'll go to that other vertex.
+And remove the edge it has with the vertex that we're trying to remove from the graph.
+Okay, So this part here once again, is going to do this.
+Other vertex is a we remove the edge and there were just looping through this list.
+Of edges.
+Now that we're done with this, we can remove the vertex itself.
+We will delete the vertex dx.
+And that's going to look like this.
+And now our graph.
+Looks like this.
+We do still have a couple of lines of code to add.
+If we have gone through this whole process here and removed all the edges, remove the vertex.
+We will return.
+True.
+If the conditional in this if statement equated to false, we will skip all of this and return false.
+So we'll look at this code in a moment in VTS code.
+And when we do, we will build this graph.
+And then we will remove DX and then we'll print it out.
+And when we print that out, it should look like this.
+All right, so let's flip over to VS code.
+So there is the remove vertex method there.
+And I'm just going to scroll this up.
+And then I'll move this over so we can zoom in on this.
+So we'll create a graph called My graph.
+And these lines here create our four vertices A, B, C, and D, and these create all of the edges
+that we had in the diagram.
+And this will print out our graph.
+So I'll run this.
+And that gives us our graph before we have run the remove vertex method on the vertex.
+So I'm going to come up here.
+How about a paste in this line of code?
+And that's what's going to remove our RD vertex.
+Then we will print this again and D shall be gone as well as any edge that connects to DD.
+So I'll run this.
+And this is exactly what we would expect.
+All right.
+That is our method for remove vertex.

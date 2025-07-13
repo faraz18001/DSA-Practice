@@ -1,0 +1,104 @@
+Now let's remove an item from our link list.
+We'll remove an item at a particular index.
+So if you're going to code this, go ahead and pause it here.
+Otherwise, I will move forward with this.
+So I'm going to bring up a link list here with our indexes.
+And just like we've seen before, we have to make sure that we don't have something out of range, like
+an index of negative one.
+Or you could say an index less than zero.
+And we can't have an index that is greater than or equal to the length.
+So we'll say if index is less than zero or the index is greater than or equal to the length.
+We're going to return none.
+So if you'll recall in our insert method when we did our if statement for items that are out of range,
+we returned false.
+But here we are returning none.
+So I wanted to talk a little bit about that.
+The reason why we return false there and return none here is because if we're successful in the insert
+method, we returned.
+True.
+So if we weren't going to be successful, we return false in the remove method.
+If we're successful, we're going to return a node.
+So in the if statement here for when we're not successful, we want to return none because none would
+be the opposite of returning a node.
+So I'm going to remove this.
+And we have a couple of scenarios that we've seen before.
+One would be removing an item from the beginning.
+So we could say if the index is zero, we're going to return self dot pop first, and then if we're
+going to remove the last item, we would say if the index is equal to the length minus one, we'll return
+self dot pop.
+So we've accounted for situations when the index is out of range or if it's the first item or the last
+item.
+So let's look at removing an item that's somewhere in the middle.
+We'll do the index of two.
+So we'll need a variable to be able to return that node.
+So at the end of this, we're going to return temp, but we'll need another variable to point to the
+item before it.
+And to show why we need that variable pointing at the node before the one we're going to remove.
+I'm going to go ahead and remove this.
+We need that there to be able to say previous next points to that next node.
+So you have to have something to the left of that arrow.
+So I'm going to bring our node back.
+So let's create both of these variables.
+So we'll start with previous and we'll say that previous equals self get and we'll pass it index minus
+one.
+So for the temp variable, we could do something similar.
+We could say that it's equal to self get and then pass it index.
+But the problem with that is that the JIT method is O of n, and there's an O of one way of assigning
+the temp variable.
+And we do it like this.
+Temp equals previous.
+Next we have a variable at the node before this.
+So this is the more efficient and therefore correct way of doing that.
+The other one will work, but this is more efficient.
+So let's look at these two lines of code with our three if statements.
+And that's what we have so far.
+And let's bring back our linked list.
+So I'm going to pop this 23 note up like this.
+And the first thing we're going to do is have the arrow that's going from the three to the 23.
+We're going to move that down to point at the seven node.
+And to do that, we're going to say previous dot next.
+Is equal to temp next.
+We do that with this line of code here, previous next equals temp next, and that moves that arrow
+down there.
+Then we want to break that 23 node off of the list.
+So we'll say temp dot next equals none.
+We'll do that like this temp next equals none.
+And that removes that item for the list.
+So our list had four items in it.
+Now it's down to three items.
+So we're going to decrement the length.
+And then the only thing left to do is return temp and that returns that item.
+So let's look at this with the rest of our code.
+That is the entire method for remove.
+We'll look at this code in a moment.
+In VTS code.
+And we will create this link list that we've been working with.
+And we're going to remove that item at the index of two.
+So our link list when we're done is going to look like this.
+Okay, so let's flip over to VW's code.
+So there is our remove method.
+And this is where we create our linked list with 11, three, 23 and seven.
+And this will print our list out.
+So let's just run this.
+And that prints out 11 323 and seven.
+So what I'm going to do is I'm going to scroll this up here.
+And in between the creation of our linked list here and our print list, I'm going to paste this line
+of code.
+So this is my link list.
+Remove the item at the index of two and then I have a line break on the end there.
+So this will print out that node.
+And then down here, we're going to print out the link list with that node removed.
+So I'll run this.
+And there is the node.
+And here's our link list with 11, three and seven with a 23 removed.
+I'm going to come up here and say temp dot value.
+And run this.
+And you can see that the node that it's removing is the 23 node.
+And then, of course, it's going to once again print out the 11 three and the seven.
+And remember, we're only doing that value to test the code.
+We don't want to leave it that way.
+We want it to return the entire node.
+So I'm going to remove this.
+And leave that as return temp.
+All right.
+So it looks like we have a working method for remove.

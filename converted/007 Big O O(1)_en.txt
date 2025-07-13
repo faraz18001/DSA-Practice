@@ -1,0 +1,22 @@
+So now let's take a look at O of one.
+We'll explain this with a function.
+We're going to call this add items.
+We're going to pass it a number n.
+And all we're going to do is we're going to return n plus n.
+So for the previous big O's that we've seen as n gets bigger, the number of operations increases.
+But in this case, the only operation is the addition.
+So if n is 1, you have one operation.
+If it's a million, you still have one operation and that is O of one.
+But what if you have two operations?
+Is that going to become O of two?
+Well, as you may have guessed, even in this situation, we're going to call it O of one.
+So O of one is also called constant time, meaning that as n increases, the number of operations is
+going to remain constant.
+So even if we have two additions like we do here, the number of operations will remain constant as
+n increases.
+So let's take a look at this on the graph.
+O of one is just that flat purple line across the bottom is just going to stay across the bottom because
+as n increases, we are not increasing the number of operations.
+It's the most efficient Big O any time that you can make anything O of one, that is optimal as you can make
+it.
+So that is our overview of O of one.

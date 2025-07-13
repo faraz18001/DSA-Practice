@@ -1,0 +1,52 @@
+So in this video, we're going to write a helper method that finds the minimum value in a particular
+subtree.
+And what we'll do is pass it a particular node.
+So let's say if we pass this the root, the minimum value in this tree would be the 18 node.
+And the way that we find the minimum value is by continually going to the left and going to the left
+again.
+And till we go to the left and it is none.
+That is how we know that the 18 is the minimum value.
+And you can do this same thing for any subtree.
+So let's say we pass this the 76 node.
+This method will give us the minimum value in this subtree here, which is the 52.
+And we'll do this this same way.
+We'll go left and we'll go left again.
+Until left is none.
+And then we know the 52 is the minimum value in this subtree.
+So let's move this over here and then we'll start out our code by calling this min value and we pass
+it a node and that node will be called current node.
+I'll represent it like this graphically, but this is the current node variable.
+And then we'll say while current node left is not none.
+And you can see here that current node left is equal to that node.
+So it is not none here.
+We'll set current node to be equal to current node dot left, which moves this down and we'll run through
+this a couple more times.
+We'll say while current node left is not none.
+We'll set current node to be equal to current node left and move this down.
+But this time when we run the while loop current node left is equal to none and that will break us out
+of this while loop.
+And then we'll return current node dot value.
+So I want you to notice that we're not just returning the node, we are specifically returning the value
+from the node, the number 18.
+So now let's look at finding the minimum value in this subtree.
+We'll say while current node left is not equal to none.
+We'll set current node to be equal to current node left, which moves this down.
+But now when we say while current node left is not none, current node left is none.
+That breaks us out of this while loop and then we return current node value, which is that value of
+52.
+So that is all of the code for this method.
+It's pretty simple.
+So we'll look at this code in a moment in VSE code, and then we'll run this line which runs min value
+on the root, and that's the root of this tree here.
+And we'll expect that to return 18 and then we'll run min value on this subtree.
+We'll do that like this by running it on my tree root dot.
+Right.
+And we'll expect this to return 52.
+So now let's flip over to VTS code and take a look at this.
+So there is our min value method there and I'll scroll up.
+And this creates that tree that we just saw.
+And these are those two lines of code that we just went over where we run this on the root and root
+dot.
+Right.
+And now I'll run this and you can see that this is returned 18 and 52.
+And that is our method for finding the minimum value.

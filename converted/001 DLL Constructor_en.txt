@@ -1,0 +1,51 @@
+Okay.
+Now we're going to do doubly link lists.
+And in this video, we're going to create our constructor.
+So I'm going to start by bringing up a singly linked list.
+A doubly linked list is just going to have arrows that also go the other way.
+So the first thing we need to do, just like we had with singly linked lists, is we need to create
+a node.
+So I'm going to start out with a singly linked list node like this and remember that looked like this
+and in the constructor.
+We had self value and self dot next in order to create this.
+So our constructor looks like this.
+So for a doubly linked list, we just need one more line like this.
+We're going to call this previous.
+It will be set to none because this node is not pointing in anything yet.
+And that's the only difference in creating the node.
+So that is going to build something that looks like this.
+So now that we can create nodes.
+Let's start building.
+A doubly linked list class.
+So we're going to start this class out by creating a constructor.
+And we're going to pass this of value so we can create the first node in the doubly linked list at the
+time that we create the doubly linked list.
+And we'll create that with this line of code.
+And we'll pass it a value.
+And notice this line of code is identical to the one we use to create a node in a singly linked list.
+The only difference is the node class that we're calling here also includes previous.
+And that we'll say self head equals new node.
+Like that.
+Self tail equals new node.
+And that does that.
+And then we'll say that the length is one.
+So we'll create a new doubly link list by doing something like this.
+My doubly linked list equals doubly linked list.
+We pass it the value seven and this line of code is going to create all of this.
+We have a head and a tail and we have a node with a value of seven and the length is equal to one.
+Now let's go look at this in VW's code.
+So up here.
+We have our node class with value next and previous.
+I'm just going to scroll this up.
+And this is where we create the doubly linked list class.
+Here's our constructor.
+And then I also have a method here called print list, just like we did in singly linked lists.
+And we'll use this to be able to look at our linked lists.
+So down here we have that line of code that we just saw, which is my doubly linked list equals doubly
+linked list.
+We're going to pass it a value of seven.
+And then when we come down here, we'll print the list.
+And we should just get that node with a value of seven.
+Now, I'm going to run this and there is our value of seven.
+All right.
+It looks like we have created a working constructor.

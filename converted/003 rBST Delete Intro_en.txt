@@ -1,0 +1,29 @@
+So in this video, we're going to look high level at what is required to delete a node from a binary
+search tree.
+And there are two parts to this.
+First, if we're going to delete that 27 node, we have to start at the root and then traverse down
+to the 21 node and then finally get down to the 27 node.
+So the first part of this is we have to be able to traverse through the tree.
+And then the second part is once we find this node, we have to be able to delete it.
+Now in this situation we are deleting a leaf node, and that's our simplest scenario.
+But what if we have nodes on the left?
+How do we delete the 27 node then?
+Well, this is actually easier than you might think.
+We just need to move this up and this is a valid binary search tree.
+So now let's look at the situation.
+When we have a subtree on the right, we can actually do the same thing here and move this subtree up.
+And this is once again a valid binary search tree.
+Where it gets more complicated is if we have a subtree on each side, we can't just move one of these
+sub trees up.
+So what we're going to do here is we're going to look at the subtree on the right of the node that we
+want to delete and we'll find the node with the lowest value.
+That's going to be the 28 node.
+And we're going to copy that value of 28 into this node up here.
+Now, let me be clear.
+We're not moving that 28 node up.
+We're just copying the value into the existing node.
+And at the moment that we do that, we have 228 nodes in the binary search tree.
+So then what we're going to do is remove that second 28 node.
+And now this is a valid binary search tree.
+And the next few videos, we will walk through all of these scenarios.
+But for now, that is our introduction to delete node.

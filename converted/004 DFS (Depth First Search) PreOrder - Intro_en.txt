@@ -1,0 +1,14 @@
+So I had mentioned in the first video for traversal that there would be three types of depth first search
+that we would look at, the first one that we're going to look at is going to be pre order.
+I'm going to bring up a tree like this.
+And with preorder the order that we're going to add the numbers to the list will be like this will start
+at the top, will add the forty seven.
+And then after that, we're just going to keep moving to the left.
+So we'll put the twenty one into the list and then the 18.
+And this is as far as we can go to the left.
+So we're going to come back up to the twenty one and go to the right there.
+And now we've looked at everything to the left of the 47.
+So now we'll go right and then after the 76 we always go left first will come down to the 52, come
+back up to the 76 and down to the 82.
+And that is the order that those will be added to the list.
+And will code this in the next video, but that is our intro to Preorder Depth First Search.

@@ -1,0 +1,60 @@
+Now let's do our pop method.
+Let's bring up our stack like this.
+Pop is going to be the removal of that top node, and then you have the top pointer point at the next
+node down.
+And then, of course, we're going to return that node that we popped from the stack.
+And then we also have to code for this situation where we don't have any items in the stack.
+So if you're going to code this, go ahead and pause it here.
+Otherwise I will get into the code.
+So we'll start this off like this.
+We'll say, Pop, we don't pass it.
+Any arguments?
+And we'll code for this situation where we have an empty stack first.
+We'll say if the height is zero.
+Will return?
+None.
+Otherwise, we do have items in the stack.
+Like this.
+And we want to return that top node.
+So we're going to need a variable to point to it.
+So we'll say temp equals self dot top like that.
+Once we've done that, we can move top down to the next node.
+So we'll say top equals top dot next, and that moves that down.
+So now we need to remove that node from the stack.
+So we'll say temp next equals none.
+That is temp dot next equals none.
+And that removes that from the stack.
+Now, let's look at this in with the rest of our code.
+Like this.
+And the only things left to do are to.
+Decrement the length by one.
+And then we'll return temp.
+And that is our pop method.
+So we'll look at this code in a moment in VTS code.
+And when we do, we will build this stack.
+We'll print this out to make sure it's printing out correctly.
+Then we'll pop this item off here.
+Take a look at that item that we popped off, and then we'll print out the linked list with the items
+remaining.
+And we should have 323 and seven.
+So let's flip over to VTS code.
+So there is our pop method there.
+And this builds the stack that we just looked at.
+And then we're going to start off by printing it out with this line here print stack.
+And I'll run this and that prints out our stack 11, three, 23 and seven.
+And then what I'm going to do is in between where we created our stack and where we printed our stack,
+I'm going to insert this line of code.
+So we're going to print.
+My stack up pop here.
+And then we have a line break after it.
+And then down here, we're going to print out the items that are left on the stack after we have popped
+that item off.
+And I'm going to run that.
+So this is the node that we popped off and the stack now has 323 and seven.
+And to take a look at what's in that note, I'm going to come up here.
+I'm going to type temp dot value, and now I'll run it again.
+And now you can see that the node that we popped from the stack is the 11 node.
+So of course I'll come back up here and remove the dot value here.
+So we're just returning temp, so we return the entire node.
+All right.
+And that is our method for pop.

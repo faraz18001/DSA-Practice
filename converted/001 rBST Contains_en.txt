@@ -1,0 +1,99 @@
+So now we're going to do recursive binary search trees.
+And what we're going to start out with is contains.
+And we did this in the other binary search tree section.
+But when we did this there, we did it iteratively, and now we're going to do it recursively.
+So we're going to start it out like this.
+And with the other contains method.
+We only passed it a value.
+We did not need to pass it a node.
+And that's why I have the double underscore in front of this for the recursive contains, because we
+don't want the end user to call this directly.
+What we're going to do is we're going to have another method called are contains for recursive contains
+that does not have a double underscore.
+And with this one we just have to pass it the value and then we pass that down to here and call the
+double underscore recursive contains with the root and that value.
+So I'm going to remove this second one and we'll build out the top one for this video.
+So now let's code for our first situation.
+That is when we have an empty binary search tree.
+In this case, we're going to say if current node is equal to none.
+And that is the case here.
+We pass this the root and the root is none.
+If that is the case, we're going to return false, because that means that the value that we're looking
+for is not in the tree.
+But now let's say we're looking for the value of 47.
+In this case, the value is in the tree.
+So we're going to say if the value that we're looking for is equal to current node value, we're going
+to return true.
+Where this becomes a little bit more complicated is if we're looking for the value of 21.
+So now this is not at the root.
+So now to walk through this, I'm going to bring up a call stack and I'm going to add an instance to
+the call stack.
+And that instance is being called on the root node to begin with.
+And then also I have this 21 underneath, because that's the value that we're looking for.
+So we'll say if the value that we're looking for is less than current node value and it is, we're going
+to return our contains and this is where it's recursive and we're going to call it on current node left.
+And we're also going to pass this that value that we're looking for.
+So now we'll add this to the call stack.
+And now this is the active instance.
+So we'll start at the top and say if current node is equal to none and that is not the case.
+And then we'll move down to here.
+And if the value that we're looking for 21 is equal to current node value, and it is, we're going
+to return true and it's going to return true to this instance.
+And once it returns that this is popped from the call stack.
+So this is the active instance again, and this is where we left off in that instance.
+And this part of this line is what called the instance that we just popped off the call stack.
+So when that instance that we just popped off returned true, it returned it to here.
+So you can see that this has a return statement.
+So where does this return this to?
+It's going to return it to here and specifically to this part here, because that is what called this
+instance down here.
+So it's going to return true to here.
+And when it does that, this gets popped from the call stack.
+And you can see that this has a return statement as well.
+So where does this return it to?
+It's going to return it to the original method call when we said we were looking for the number 21,
+So it will return it to here.
+So that's how it works if the value is in the tree that we're looking for.
+If it is not in the tree, let's say we're looking for the number 21 again.
+Let's walk through how that would work.
+So we'll put an instance of our contains on the call stack called With the Root, and we're looking
+for the number 21.
+And since 21 is less than 47, this if statement is going to apply.
+And in this case, current node left is none.
+So we're going to call an instance on none.
+So now this is the active instance on the call stack.
+So this is going to start at the top.
+And say if current node is equal to none and that is the case, we're going to return false.
+And it's going to return false to here.
+And this gets popped from the call stack.
+So now this is the active instance.
+Again, this is where we left off.
+And this code here called that instance that we just popped off.
+So when it returned false, it's returning it to here.
+And this, in turn, will return false to this method.
+It will return it to here.
+And when it does that, this gets popped from the call stack and this will return false to the original
+method call.
+So we do need to add one thing to this method.
+This code here traverses left.
+We also need code for traversing.
+Right.
+So I'll add this.
+This part here could be an else.
+I just think it's a little bit more readable to do it this way.
+And for teaching purposes, I like to make the code as readable as possible.
+And remember, we don't call this method directly.
+We kick all of this off with this method here.
+So we'll look at this code in a moment in VTS code, and when we do, we'll build this binary search
+tree and we'll run our contains on 27 and that should return true.
+And then we'll run it again on the number 17, which would be here if it was in the tree.
+But it's not.
+So that should return false.
+So now let's flip over and take a look at this.
+So there are the two recursive contains methods that we just created.
+And I'll scroll up and this creates that binary search tree that we just saw in the diagram.
+And here we're going to run our contains on the number 27 and the number 17.
+And I'll run this.
+And you can see up here that with the number 27, it returned true.
+And with the number 17, it returned false.
+So it looks like we have a working method for recursive contains.

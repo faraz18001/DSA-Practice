@@ -1,0 +1,41 @@
+Now let's create our push method and push is going to look like this and we're going to push a new node
+onto the stack and we'll have top point to that new node.
+And we'll be able to borrow heavily from the prepend method for link lists.
+And just as we had in prepend, we have to code for when we don't have any items in the stack.
+So those are the steps.
+If you want to code this, go ahead and pause it here.
+Otherwise, I will get into the code.
+So we start this out like this.
+We're going to say push.
+We're going to pass it of value.
+We'll use that value to create a node.
+And there's our node.
+So we'll code for an empty stack first.
+We'll say if the height is zero.
+Like this.
+We're going to have self top.
+Be equal to new node like this.
+And then the other possibility is that we have a stack that has items in it.
+So we'll say else.
+And we'll bring this up like this, and we're going to push that 11 on to that existing stack.
+So we'll say new node dot next equals self dot top.
+So that is new node dot.
+Next is going to point to the same node that top is pointing to like this.
+Now we'll say self top equals new node that moves top up and adds that into our stack.
+So let's add this in with the rest of our code like this and the only thing left to do.
+Is to increase the height by one.
+So we'll look at this code in a moment in VTS code and we'll create.
+This stack with one item on it and then we will push.
+The number one onto that and we'll print this out and we should get one and two.
+All right, so let's flip over to VS code.
+There is our push method there.
+This is where we create our new stack and we create it with a node with a value of two.
+We already know that this works because this is what we did in the last video.
+What we're going to test in this video is this line of code here.
+Does this push method work?
+And we'll know that that works by running the print stack method down here.
+All right.
+So I'm going to run this.
+And that prints out one and two.
+All right.
+So it looks like we have a working method for push.

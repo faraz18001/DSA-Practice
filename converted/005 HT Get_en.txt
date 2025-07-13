@@ -1,0 +1,61 @@
+Now let's do our get method.
+Let's bring up our address space and we'll have a couple of key value pairs in there, bolts and washers.
+And that will bring in our hash method like that.
+And we'll say get item washers.
+So we'll run this through the hash that gives us an address of for we go to that address, we'll loop
+through the key value pairs till we get to washers and then we'll return the value.
+If we have something like get item lumber that's going to be at the address of six, we come down here
+that doesn't exist.
+So in this case, we're going to return none.
+All right, so let's shrink this down and write our method.
+So we'll say get item.
+We're going to pass it a key.
+Then we need to figure out the index for that key.
+So index equals self dot hash.
+We pass this a key.
+We run that method.
+In this case, we're looking for washers and we know that that's at the address of four.
+So we only want to look for washers if there are key value pairs at that address.
+So we're going to say if self data map at that index is not none.
+So in this case, at the index of four, we have key value pairs, but at the index of six we do not.
+There's no point in looking for something if the item we are looking for is at the index of six.
+Once we know there are items there now we can loop through them.
+So we're going to say for I in range of the length of self dot data map at that index.
+It is not the list that is the data map going zero through six.
+It is this list here that is at the index of four.
+And we're looking for washers in this case.
+So to see if we have a match, we're going to use this if statement.
+So let's walk through this.
+If self dot data map at that index, that's this same thing here, which was this list.
+Then we move to the I.
+The eye is the eye from the for loop.
+In this first iteration, that is zero.
+So the item that's at the index of zero at that list is this key value pair.
+So then we want to look at that key bolts that is at the index of zero.
+So bolts, does that match the key?
+The one we passed to the method In this case, the answer is no.
+So we come back and run the for loop again.
+So now I is one and that is this key value pair at the index of zero inside of that key value pair that
+is washers.
+That is a match for the key that we're looking for.
+So we will return self dot data map at that index at I.
+But the next index over is the value 50.
+And then the other possibility, of course, is that we are looking for a key that is not in the hash
+table.
+So in that case, we're going to return none.
+And that is the entire method for get item.
+So we'll look at this in a moment.
+In VTS code will create these two key value pairs.
+And then what we'll do is we'll do a get item for bolts and washers that should print out 4500 and then
+print out 50.
+Then we'll also do a get item for lumber, which is not in the hash table, and that should return none.
+All right, let's flip over to vs code.
+Okay, there is our get item method there.
+This creates our hash table called my hash table.
+And we'll add bolts and washers to the hash table.
+And then down here, we have three print statements, and each one of them is a get item one for bolts
+that should return 4501 for washers, that should return 50 and then one for lumber, which should return
+none.
+So I'll run this and that returns 4550 and none.
+And that is our method.
+Forget.

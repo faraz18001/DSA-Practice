@@ -1,0 +1,60 @@
+Okay, so now let's do prepend.
+We'll bring up our link list here.
+And what we're going to do is add an item to the beginning of the link list.
+So first, we want that new node to point at that 11 node, the last node in the list.
+So we need to set the next pointer on that node equal to something that is pointing at that node.
+So we'll set the next node on the new node equal to head, and that points that over there.
+And then we'll have Head Point to the new node.
+And that adds that into the list.
+And of course, this is going to be a little different if we have an empty list like this.
+When we add it in this situation, we're going to have head and tail point to the new node.
+So if you want to take a shot at coding this, then pause the video here and go over to VS code and
+try to write the code.
+Otherwise we're going to get into the code.
+So we'll begin this.
+Like this.
+We're going to pass it of value.
+And of course, the first thing we're going to do is create the node with that value.
+And that creates our node.
+So we had two situations we were going to code for.
+If we had an empty list or a list with items in it.
+Let's start with the empty one.
+In this situation, we're just going to have head and tail point to the new node.
+So in order to do this, we have to test to see is the list empty that we're inserting into?
+And we'll do that by saying if the length is zero.
+They will set head equal to the new node.
+Like this.
+And that we'll set tail equal to the new node.
+Like this.
+So let's take this code and put it in with the rest of our code.
+So the other scenario we can have is that we actually have items in the list.
+So we'll say else and let's build out this else statement.
+So we want that new node to point at that 11 node and we'll set it equal.
+To the head.
+And that does.
+This, then we want head to point to that new node.
+We'll do that with this line of code and we'll say head equals new node.
+We'll move that over and that adds that into the list.
+So now let's look at this code in with the rest of our code so far.
+And the only things left to do are to increase the length by one.
+And in this case, we're going to return True.
+And this is an optional line of code here.
+And as I mentioned with append, I'm going to be using append.
+I'll also be using prepend in another method in a few videos that requires a Boolean to be returned.
+So that is why I'm going to put the return true in here.
+So we'll look at this code in a moment in VTS code, and then we will build a linked list that looks
+like this and that we will prepend the number one to that list.
+So it'll start out with a two and a three and we will prepend a one and then we'll print the list out
+and it should print out one, two, three.
+All right, let's flip over to VTS code.
+There is our prepend method there.
+This is going to create that initial linked list with the two and the three in it.
+And then here we're going to print that out that list with the two and the three.
+Okay.
+And there is our two and our three.
+And then what I'm going to do is I'm going to come down here and I'm going to paste in our line that
+pretends our number one there.
+And now when we do our print list, this should print out one, two, three.
+So I'm going to run this.
+And that prints out one, two, three.
+And that is our method for prepend.

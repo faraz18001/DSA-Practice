@@ -1,0 +1,21 @@
+Different terms for inputs is a Big O concept that interviewers like to ask as kind of a gotcha question.
+So let's take a look at this.
+So here is a for loop followed by a for loop.
+We've seen this before with each of these running n times.
+And when we looked at this, this was O of 2n, we dropped the constant and it was O of n, but with
+different terms for inputs.
+They will take what looks a whole lot like this and make a change to it.
+Instead of the function having one parameter n there will be two parameters.
+I'll call them a and b, and the first for loop is now going to run a times and the second for loop
+is going to run b times.
+And where they get you with this, is that a for loop you think okay, a for loop is O of n oh and then
+it's followed by another for loop that's O of n We're going to add these together.
+That's O of 2n I'm going to drop the constant and it's O of n, But you can't do that with a function
+that has two different parameters.
+You can't say that a is equal to n and b is equal to n.
+There are two different things.
+So what you would have to do here is say this is O of a and this is O of b, and when you add these
+together it is O of a plus b, and that's as far as you can simplify this.
+You can't simplify this all the way down to one variable and call it O of n.
+Similarly, if you had nested for loops like this, this would be O of a times b, and that is different
+terms for inputs.

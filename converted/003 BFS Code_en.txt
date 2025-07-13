@@ -1,0 +1,73 @@
+So now we're going to write the code for Breadth First Search, so we're going to bring up our tree
+like this or shrink it down to the corner and then we'll begin our method.
+So I want to point out that this is a method in the binary search tree class.
+So this is not a separate function.
+So that's why we have the self keyword there.
+And then we have a few variables that we need to create.
+First will say that current node is equal to self-portrait, I've highlighted that in green on the tree
+there, and then we're going to need a cue.
+I'm going to implement this as a list.
+So if you'll recall from when we created the queue data structure, a list is not the ideal way to implement
+a cue from a big perspective.
+But the reason I chose it here is everyone by this point in the course is very familiar with lists.
+So I want to use what's most familiar here so we can focus in on the mechanics of creating the breadth
+first search.
+So bring in the queue here.
+And then the other thing we need to create is a results list, I'll bring that in like this and then
+we need to take that current note and put it in to the queue like this will say Cuota Pend.
+Current node, so remember, this is the entire node, the value and left and right, so that I'm going
+to represent that node that we put in the queue like this as a blue number.
+So we know that that's the entire node, not just the value.
+And it's very important that you put this node in the queue before you start your while loop.
+Because the while loop is going to run as long as the length of the queue is greater than zero and other
+words, it's going to run until the queue is empty.
+If you don't put the first node in there, the while loop will never run because it will start out by
+being empty.
+So let's focus in on the while loop and build this part out.
+So the first thing we're going to do is set that variable current node to be equal to the first item
+in the queue.
+And remember, this is the value and left and right.
+So first let's do something with the value will say results dot append current node dot value.
+So we're not putting the entire node in there is just the dot value portion.
+So now let's look to the left of that node will say if current node left is not none, in other words,
+if there is a node to the left of the current node.
+There were going to say, kudos upend current, no less will append the node to the left of the current
+node like this.
+And then we'll do the same thing on the right, if there's a note on the right, we're going to do,
+Cuota penned the node on the right, which is the 76.
+So then we go up and run the while loop again.
+So these two lines here, as we move through this while loop and repeat this, I'm going to combine
+these.
+So we're going to pop that first item off and then we're going to append the value into the results
+list.
+So then the twenty one, we're going to look to see if it has an item on the left that's going to be
+the 18 will append that to the Q and then the item on the right will append that.
+Now we run the while loop again and we move the 76 down to the results and we look to the left to the
+76 and add the 52 to the Q and then to the right of the 76.
+We append the 82.
+Now we run the while loop again and now we have the 18.
+Now the 18 doesn't have anything on the left or on the right.
+Same is true for the 27 and the 52 and the 82.
+So now our Q is empty and we were only running the while loop while the Q had a length greater than
+zero.
+So we're done with this.
+We're done with the while loop.
+The only thing left to do is return that results list.
+So let's look at this and with the rest of our code like this, this is the entire method for breadth
+first search.
+And we'll look at this in a moment in VSG code.
+And when we do, we'll create this tree and we'll expect to see this list returned.
+OK, so let's go take a look at this in VS code.
+OK, so there is our method there for breadth first search, I'm going to scroll to the top here and
+I want to emphasize that this is a method inside of our binary search tree class.
+So I'm going to scroll back down here, and that is our method again.
+And I'll scroll up a little more.
+This is going to create that binary search tree that we just saw and we're going to print tree dot BFW
+breadth, first search.
+And we would expect it to return this list here.
+So I'll run this.
+And you can see that this list up here matches this list down here.
+And then something else I wanted to point out here is that list that was returned is in the same order
+that we created the tree here.
+OK.
+And that is our method for breadth first search.

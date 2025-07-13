@@ -1,0 +1,68 @@
+Okay, so now let's do Pop first.
+So I'll bring up our doubly linked list here.
+And Pop first is just removing that first item.
+We do have two edge cases.
+First, as if we have only one item in the list.
+And the second one is if we don't have any items in the list.
+So if you're going to code this, go ahead and pause it here.
+All right.
+So we'll start it like this and we will start with this scenario first, where we don't have any items
+in the length list.
+And we'll say if the length is zero.
+Will return none.
+So the second scenario we have is if we only have one item in the link list like this, and it doesn't
+matter if we have one item like this or if we have two or more.
+We are going to need the temp variable to point to the head.
+We'll do that like this.
+And for this scenario, we're going to say if the length is one.
+Will have head and tail point to none.
+Like that.
+And now let's look at what we have so far.
+With our code.
+This is for if we have zero items in the list, this is if we have one.
+And now let's look at if we have two or more.
+So we'll say else and we'll build this out.
+We'll bring this up.
+And remember, we've already set temp equal to head.
+So to remove that item, the first thing we're going to do is we're going to set head equal to head
+dot next.
+With this line of code had equals head next and that moves that over.
+Then we're going to say head dot previous is none.
+Which does that.
+We do that with this line of code header that previous equals none.
+That we'll say temp dot next is none.
+And we'll do that like this next is equal to none.
+And that removes that from the list.
+So let's look at this code and what the rest of our code.
+And the only things left to do are to decrement the length.
+And then we'll return temp.
+And that's our method for Pop first.
+We'll look at this code in a moment in VTS code.
+And when we do, we'll create a doubly linked list that looks like this.
+This way we can test all three of our scenarios for having two or more items on the list.
+And we'll see if Pop first works in that situation.
+And for one item on the list to see if that works, and then we'll run it again to see if it works when
+we don't have any items in the list.
+All right.
+So let's flip over to VW's code.
+So there is our pop first method.
+This creates our linked list with the values two and one that we just saw.
+And this is going to print that out.
+So let's run this.
+And that prints out our linked list with two and one.
+So what I'm going to do is I'm going to scroll this up.
+And then I'm going to remove this line here where we print the length list out and I'm going to replace
+it with.
+These three lines of code.
+And all we're doing here is running pop first three times in a row.
+Once for when we have two items and then one item and then four zero items.
+So I'll run this and that returns our two nodes and returns none.
+And just to make sure this is all working correctly, I'm going to come up here and change this to temp
+value.
+And then run this again.
+And that has removed our two node, then our one node, and then return none.
+When our list was empty.
+And as we usually do, we're going to come up here and remove the dot value.
+So it just returns a node instead of just the value.
+All right.
+And that is our method for pop first.

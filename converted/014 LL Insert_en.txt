@@ -1,0 +1,109 @@
+Okay, so now we're going to insert a node into our linked list and it's going to look like this at
+a particular index.
+We're going to insert a new node that has a particular value.
+So if you want to code this, go ahead and pause this here.
+I haven't really given anything away by showing this line, but it is a good way to describe what it
+is that we're doing.
+Otherwise, we'll get into this.
+So I'm going to bring up our linked list here with the indexes.
+And this is going to be the item that we insert.
+And just like we saw with get and set, we can't insert this at an index that is out of range.
+So we can't have anything at the index of negative one.
+Or we could say an index less than zero.
+And we can't have this at an index out here.
+Or we could say an index greater than the length.
+So we'll say if the index is less than zero or.
+The index is greater than the length.
+We're going to return false.
+So let's remove that and look at if we insert at the index of zero, if we insert this here, we've
+already written code for adding an item to the beginning of a link list.
+So we could say if the index is zero.
+We're going to return self dot prepend and pass it the value.
+So there are two things I want to point out about this line of code.
+First, it has the return keyword in here, which is saying once this prepend method runs, we're going
+to be done.
+We're not going to keep running code in this method.
+The other one is the self keyword.
+So we are running this on this particular instance of the link list.
+So we'll remove that.
+And of course, we can do the same thing on the other end of the link list.
+We'll say if the index is equal to the length.
+Or get a return self depend.
+Very similar to what we did with prepend.
+So now let's look at all three of these statements.
+This one here is if we have an index that is out of range.
+And it returns false.
+This is if we're adding this to the beginning, this is adding it to the end.
+So now let's look at inserting this node somewhere in the middle.
+We're going to insert this at the index of two and it will look like this when we're done.
+So I'm going to remove that for now.
+In order to do this, we're going to need to have a variable that points to the node before the index
+where we're inserting this.
+And the reason why you have it point here instead of the index where you're inserting this is you're
+going to need the next pointer from that three node.
+Two point down here.
+That's going to be temp next.
+If you have temp over here, you don't have any way to get to that pointer.
+So it has to be back here.
+So we've created a couple of new things here.
+So let's write the code to create them.
+The first is we created this node.
+We'll say new node equals node and we're going to give it the value of four.
+In this case.
+And then we need to create that temp variable and we can create that by saying temp equals self get.
+And just pass it index minus one and it will point that to the appropriate node.
+Okay, so now let's look at this code.
+And with the rest of our code so far we have our three if statements.
+We've created the node and we've created the variable temp.
+So let's bring this back up.
+And the first thing we're going to do is point that next pointer on that new node up to the 23.
+So we'll say new node next.
+And we're going to set that equal to something that is pointing to the 23 node.
+And that would be temp.
+Dot next.
+So we set those equal that will point that up there.
+We'll do that with this line of code.
+New nodes next equals temp dot next.
+And then we need to take the arrow from the three node that is pointing to the 23 node and have it point
+to the four node.
+So we'll say temp dot next.
+Is equal to new node.
+Like this temp dot next equals new node.
+That adds that into the list.
+So let's look at this and with the rest of our code.
+And the only things left to do is to increment the length by one.
+And then we'll return.
+True.
+Now, one of the things I want to point out here is if this is successful here, we're returning.
+True.
+And if it's not successful up here, we're returning false.
+If you'll recall, when recreated the prepend method and the append method, we had them return.
+True.
+And I said that we're going to use both of those in another method later.
+The insert method.
+The way we've written this here, it has to return true or false, and by writing the prepend method
+and the append method, the way we did that allows us to use those inside of this method.
+Okay, so we'll look at this code in a moment in VTS code.
+And when we do, we're going to create a linked list with a value of zero and to.
+And then we're going to run the insert method and say at the index of one, insert a node with the value
+of one.
+Then we should have a linked list with the values of zero one and two.
+Okay, so let's flip over to VS code.
+So there is our insert method that we just created.
+And this is where we create our linked list with the values of zero and two.
+And then we're going to print this out to make sure that is correct.
+Okay, so that is returning zero and two.
+So that is correct.
+I'm going to take this code.
+I'm just going to scroll it up here.
+So we can zoom in.
+And then what I'm going to do is between this creation of the linked list and the print list right here.
+Is.
+I'm going to paste.
+And our insert method.
+And we are inserting an item at the index of one with the value of one.
+So with that new node inserted when we do our print list here.
+This should print out 012.
+So let's run this.
+And that is returning 012.
+So it looks like we have a working method for insert.

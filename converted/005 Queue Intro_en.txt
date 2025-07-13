@@ -1,0 +1,30 @@
+Now let's look at cues.
+And cues are something we're all familiar with.
+We join a queue whenever we get in line and then there's other people that can get in line behind us.
+But if you were there first, you will be the first person out of the line.
+This is called FIFO.
+First in, first out.
+And when we add people to the queue like this, we use the term in queue.
+When we remove people from the queue like this, we use the term D queue.
+Now let's look at a couple of data structures that we could potentially use to create a queue.
+Let's start with a list.
+So for something to be a cue, you add on one end in, you remove on the other end.
+With a list.
+Removing and adding from the end is o of one.
+But on the other end removing and adding is o of n.
+So if you have a queue, let's say we're going to add on this end and we're going to remove on this
+end we have one way that is O of N and the other way that is O of one.
+Likewise, if we add on this end and remove on this end we still have one end that's O of n and one
+end that is O of one.
+Now let's compare this.
+To a link list.
+With a link list.
+Removing is o of pn on the end, but adding it back on is of one.
+On the other end, removing AZO of one and adding it back on is also OAV one.
+So you have three of ones here and one o of n.
+And that means what you don't want to do is you don't want to dequeue from this end.
+You want to enqueue from this end and dequeue from this end because both of those are o of one.
+With a linked list we call these head and tail a change that we're going to have for it to be a Q as
+we're just going to call these first and last.
+And that is our intro.
+To Qs.
