@@ -1,17 +1,14 @@
-def sqrt(x):
-    res=0
-    left,right=0,x
+def binary_search(arr:list,target:int):
+    left,right=0,len(arr)-1
     while left<=right:
         mid=(left+right)//2
-        
-        if mid**2==x:
+
+        if arr[mid]==target:
             return mid
-        
-        if mid**2<x:
-            res=mid
+        if arr[left]<target:
             left=mid+1
-            
-        else:
+
+        elif arr[right]>target:
             right=mid-1
-            
-    return res
+
+    return -1

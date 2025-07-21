@@ -1,23 +1,15 @@
-#
-# @lc app=leetcode id=367 lang=python3
-#
-# [367] Valid Perfect Square
-#
 
-# @lc code=start
-class Solution:
-    def isPerfectSquare(self, num: int) -> bool:
-        left,right=1,num
-        while left<=right:
-            mid=(left+right)//2
+
+def solution(x):
+    l,r=1,x
+    while l<=r:
+        mid=(l+r)//2
+        if mid*mid==x:
+            return True
+        elif mid*mid<x:
+            l=mid+1
             
-            if mid*mid==num:
-                return True
-            elif mid*mid<num:
-                left=mid+1
-            else:
-                right=mid-1
-        return False
-        
-# @lc code=end
-
+        else:
+            r=mid-1
+            
+    return False
