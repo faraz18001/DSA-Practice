@@ -1,3 +1,9 @@
+# Runtime Complexity: O(n) in worst case
+# - The initial binary search is O(log n)
+# - However, the while loops to find leftmost and rightmost positions can take O(n) time
+#   in the worst case when all elements in the array are the same as the target
+# - Therefore, overall time complexity is O(n)
+# Space Complexity: O(1) - only using a constant amount of extra space
 def find(arr:list,target:int):
     if not arr:
         return (0, 0)
