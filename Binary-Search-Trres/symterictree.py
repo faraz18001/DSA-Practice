@@ -1,4 +1,4 @@
-
+{{REWRITTEN_CODE}}
 from typing_extensions import NoDefault
 
 
@@ -50,5 +50,42 @@ def solution(root):
         return False
     return dfs(root['left'], root['right'])
 
-res=solution(root)
+
+def dfs(node):
+
+    stack = [node]
+    visited = []
+
+    while len(stack) != 0:
+        node = stack.pop()
+        if node is not None:
+            visited.append(node['val'])
+
+            stack.append(node['right'])
+
+            stack.append(node['left'])
+        else:
+            stack.append('null')
+
+    return visited
+
+
+def iterativeley_solution(root):
+    if root is None:
+        return True
+    stack = [(root['left'], root['right'])]
+    while stack:
+        left, right = stack.pop()
+        if left is None and right is None:
+            continue
+        if left is None or right is None:
+            return False
+        if left['val'] != right['val']:
+            return False
+        stack.append((left['left'], right['right']))
+        stack.append((left['right'], right['left']))
+    return True
+
+
+res = iterativeley_solution(root)
 print(res)
